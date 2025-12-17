@@ -9,7 +9,6 @@ import {
 export const Auth = () => {
     const [email, setEmail] = React.useState("");
     const [password, setPassword] = React.useState("");
-    console.log(auth.currentUser?.photoURL);
 
     const signIn = async () => {
         try {
