@@ -1,12 +1,11 @@
-import React from "react";
+import { Auth } from "./components/auth";
 
 function App() {
-    const [test, setTest] = React.useState(0);
     return (
         <>
             <div>hello</div>
-            {test}
-            <button onClick={() => setTest((prev) => prev + 1)}></button>
+
+            <Auth />
         </>
     );
 }
