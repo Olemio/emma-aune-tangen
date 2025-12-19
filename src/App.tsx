@@ -7,6 +7,7 @@ import {
     addDoc,
     deleteDoc,
     doc,
+    updateDoc,
 } from "firebase/firestore";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
     const [newMovieTitle, setNewMovieTitle] = React.useState("");
     const [newReleaseDate, setNewReleaseDate] = React.useState(0);
     const [newReceivedAnOscar, setNewReceivedAnOscar] = React.useState(false);
+    const [updateTitleState, setUpdateTitleState] = React.useState("");
 
     const moviesCollectionRef = collection(db, "movies");
 
@@ -37,6 +39,16 @@ function App() {
             getMovieList();
         } catch (error) {
             console.error("Error deleting movie:", error);
+        }
+    };
+
+    const updateMoveTitle = async (id: string) => {
+        try {
+            const movieDoc = doc(db, "movies", id);
+            await updateDoc(movieDoc, { title: updateTitleState });
+            getMovieList();
+        } catch (error) {
+            console.error("Error updating movie title:", error);
         }
     };
 
@@ -96,6 +108,16 @@ function App() {
                             <p>{movie.receiverdAnOscar ? "Yes" : "No"}</p>
                             <button onClick={() => deleteMovie(movie.id)}>
                                 Delete Movie
+                            </button>
+
+                            <input
+                                placeholder="new title..."
+                                onChange={(e) =>
+                                    setUpdateTitleState(e.target.value)
+                                }
+                            />
+                            <button onClick={() => updateMoveTitle(movie.id)}>
+                                Update title
                             </button>
                         </div>
                     )
