@@ -1,0 +1,19 @@
+/* index.css */
+:root {
+    --bg: #FEFEFF;
+    --text: blue;
+    --muted: #777;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', system-ui, sans-serif;
+}
