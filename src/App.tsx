@@ -11,7 +11,7 @@ function App() {
             <div className="product-list">
                 {Array.from({ length: 10 }).map(() => (
                     <ProductCard
-                        img={"../temp/mona-lisa-painting.jpg"}
+                        img={"./temp/mona-lisa-painting.jpg"}
                         name={"Mona Lise"}
                     />
                 ))}
