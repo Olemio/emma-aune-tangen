@@ -1,6 +1,6 @@
 import React from "react";
 import { Auth } from "./components/auth";
-import { db } from "./config/firebase";
+import { db, auth } from "./config/firebase";
 import {
     getDocs,
     collection,
@@ -52,22 +52,23 @@ function App() {
         }
     };
 
-    React.useEffect(() => {
-        getMovieList();
-    }, []);
-
     const onSubmitMovie = async () => {
         try {
             await addDoc(moviesCollectionRef, {
                 title: newMovieTitle,
                 releaseDate: newReleaseDate,
                 receiverdAnOscar: newReceivedAnOscar,
+                userId: auth.currentUser?.uid,
             });
             getMovieList();
         } catch (error) {
             console.error("Error adding movie:", error);
         }
     };
+
+    React.useEffect(() => {
+        getMovieList();
+    }, []);
 
     return (
         <>
