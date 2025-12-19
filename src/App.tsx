@@ -1,5 +1,6 @@
 import Header from "./components/Header.tsx";
 import ProductCard from "./components/ProductCard.tsx";
+import monaLisa from "./temp/mona-lisa-painting.jpg";
 
 function App() {
     return (
@@ -10,10 +11,7 @@ function App() {
 
             <div className="product-list">
                 {Array.from({ length: 10 }).map(() => (
-                    <ProductCard
-                        img={"./temp/mona-lisa-painting.jpg"}
-                        name={"Mona Lise"}
-                    />
+                    <ProductCard img={monaLisa} name={"Mona Lise"} />
                 ))}
             </div>
         </div>
