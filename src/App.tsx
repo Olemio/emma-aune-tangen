@@ -72,7 +72,7 @@ function App() {
 
     return (
         <>
-            <div>hello</div>
+            <div>bingobnan</div>
 
             <Auth />
 
