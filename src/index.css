@@ -98,6 +98,12 @@ header {
     margin-bottom: 1.25rem;
 }
 
+.product-box-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 @media (max-width: 730px) {
     .header-content {
         flex-direction: column;
