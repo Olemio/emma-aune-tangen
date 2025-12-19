@@ -1,11 +1,14 @@
-export default function ProductCard() {
+export default function ProductCard({
+    img,
+    name,
+}: {
+    img?: string;
+    name?: string;
+}) {
     return (
-        <>
-            <img
-                className="image"
-                src="../temp/mona-lisa-painting.jpg"
-                alt=""
-            />
-        </>
+        <div className="product-box">
+            <img className="image" src={`${img}`} alt="" />
+            <p className="text-md">{name}</p>
+        </div>
     );
 }

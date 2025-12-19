@@ -9,16 +9,12 @@ function App() {
             <h1 className="text-lg">Mine Bilder</h1>
 
             <div className="product-list">
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
+                {Array.from({ length: 10 }).map(() => (
+                    <ProductCard
+                        img={"../temp/mona-lisa-painting.jpg"}
+                        name={"Mona Lise"}
+                    />
+                ))}
             </div>
         </div>
     );
