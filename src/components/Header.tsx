@@ -1,7 +1,11 @@
 export default function Header() {
     return (
-        <div>
-            <h1>Emma Aune-Tangen</h1>
-        </div>
+        <header>
+            <div className="header-content">
+                <p className="header-logo">Emma Aune-Tangen</p>
+                <p className="text-sm">emma.sin.mail@gmail.com</p>
+            </div>
+            <div className="header-line"></div>
+        </header>
     );
 }
