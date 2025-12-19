@@ -1,4 +1,5 @@
 import Header from "./components/Header.tsx";
+import ProductCard from "./components/ProductCard.tsx";
 
 function App() {
     return (
@@ -8,11 +9,16 @@ function App() {
             <h1 className="text-lg">Mine Bilder</h1>
 
             <div className="product-list">
-                <img
-                    className="image"
-                    src="../temp/mona-lisa-painting.jpg"
-                    alt=""
-                />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
             </div>
         </div>
     );
