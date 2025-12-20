@@ -10,7 +10,7 @@ export default function ProductCard({
     return (
         <div className="flex flex-col rounded-lg border border-slate-300">
             <img
-                className="rounded-t-lg aspect-[4/5] object-cover"
+                className="rounded-t-lg aspect-[3/4] object-cover"
                 src={`${img}`}
                 alt=""
             />
