@@ -3,7 +3,7 @@ import monaLisa from "../temp/mona-lisa-painting.jpg";
 
 export default function Main() {
     return (
-        <main className="flex flex-col items-center mx-auto w-full max-w-[1100px]">
+        <main className="flex flex-col items-center mx-auto w-full max-w-[1000px]">
             <h1 className="text-3xl mb-8">Mona Lisa Collection</h1>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full">
