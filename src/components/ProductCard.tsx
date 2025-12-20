@@ -8,7 +8,7 @@ export default function ProductCard({
     price?: string;
 }) {
     return (
-        <div className="flex flex-col rounded-lg border border-gray-300 bg-teal-50">
+        <div className="flex flex-col rounded-lg border border-gray-300">
             <img
                 className="rounded-t aspect-[4/5] object-cover"
                 src={`${img}`}
