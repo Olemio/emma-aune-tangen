@@ -1,7 +1,7 @@
 export default function Header() {
     return (
         <header>
-            <div className="max-w-[1200px] flex justify-between">
+            <div className="w-full max-w-[1200px] mx-auto py-4 px-6 flex justify-between items-center">
                 <p className="font-fustat text-2xl text-gray-800">
                     Emma Aune-Tangen
                 </p>

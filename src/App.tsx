@@ -4,7 +4,7 @@ import monaLisa from "./temp/mona-lisa-painting.jpg";
 
 function App() {
     return (
-        <div className="flex flex-col items-center">
+        <div>
             <Header />
 
             <h1>Mona Lisa Collection</h1>
