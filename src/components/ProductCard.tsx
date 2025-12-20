@@ -8,7 +8,7 @@ export default function ProductCard({
     price?: string;
 }) {
     return (
-        <div>
+        <div className="flex flex-col bg-teal-100 p-2 rounded">
             <img src={`${img}`} alt="" />
             <div>
                 <p>{name}</p>
