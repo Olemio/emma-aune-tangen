@@ -5,6 +5,7 @@ export default function Header() {
                 <p className="font-fustat text-2xl">Emma Aune-Tangen</p>
                 <p className="text-sm">emmaaunetangen@gmail.com</p>
             </div>
+
             <div className="mx-auto h-[1px] w-full max-w-[1100px] rounded-lg bg-gray-400"></div>
         </header>
     );
