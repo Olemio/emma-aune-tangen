@@ -3,8 +3,8 @@ import monaLisa from "../temp/mona-lisa-painting.jpg";
 
 export default function Main() {
     return (
-        <>
-            <h1>Mona Lisa Collection</h1>
+        <main className="flex flex-col justify-center items-center py-4 mx-auto w-full max-w-[1200px]">
+            <h1 className="text-xl">Mona Lisa Collection</h1>
 
             <div>
                 {Array.from({ length: 100 }).map(() => (
@@ -15,6 +15,6 @@ export default function Main() {
                     />
                 ))}
             </div>
-        </>
+        </main>
     );
 }
