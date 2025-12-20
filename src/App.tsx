@@ -3,7 +3,7 @@ import Main from "./components/Main.tsx";
 
 function App() {
     return (
-        <div className="bg-teal-50 text-gray-700 px-4">
+        <div className="bg-slate-50 text-slate-800 px-4">
             <Header />
 
             <Main />
