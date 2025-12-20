@@ -4,12 +4,12 @@ import monaLisa from "./temp/mona-lisa-painting.jpg";
 
 function App() {
     return (
-        <div className="page-wrapper">
+        <div>
             <Header />
 
-            <h1 className="text-lg bg-red-500">Mona Lisa Collection</h1>
+            <h1>Mona Lisa Collection</h1>
 
-            <div className="product-list">
+            <div>
                 {Array.from({ length: 100 }).map(() => (
                     <ProductCard
                         img={monaLisa}

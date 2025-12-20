@@ -8,11 +8,11 @@ export default function ProductCard({
     price?: string;
 }) {
     return (
-        <div className="product-box">
-            <img className="image" src={`${img}`} alt="" />
-            <div className="product-box-info">
-                <p className="text-md">{name}</p>
-                <p className="text-sm">{price}</p>
+        <div>
+            <img src={`${img}`} alt="" />
+            <div>
+                <p>{name}</p>
+                <p>{price}</p>
             </div>
         </div>
     );
