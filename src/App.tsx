@@ -1,23 +1,12 @@
 import Header from "./components/Header.tsx";
-import ProductCard from "./components/ProductCard.tsx";
-import monaLisa from "./temp/mona-lisa-painting.jpg";
+import Main from "./components/Main.tsx";
 
 function App() {
     return (
         <div className="bg-teal-100">
             <Header />
 
-            <h1>Mona Lisa Collection</h1>
-
-            <div>
-                {Array.from({ length: 100 }).map(() => (
-                    <ProductCard
-                        img={monaLisa}
-                        name={"Mona Lise"}
-                        price={"Super masse kroner!"}
-                    />
-                ))}
-            </div>
+            <Main />
         </div>
     );
 }
