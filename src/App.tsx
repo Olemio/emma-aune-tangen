@@ -4,7 +4,7 @@ import monaLisa from "./temp/mona-lisa-painting.jpg";
 
 function App() {
     return (
-        <div>
+        <div className="bg-teal-200">
             <Header />
 
             <h1>Mona Lisa Collection</h1>
