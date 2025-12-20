@@ -1,6 +1,6 @@
 export default function Header() {
     return (
-        <header className="flex flex-col mb-8">
+        <header className="flex flex-col mb-16">
             <div className="flex justify-between items-center py-4 mx-auto w-full max-w-[1200px]">
                 <p className="font-fustat text-2xl">Emma Aune-Tangen</p>
                 <p className="text-sm">emmaaunetangen@gmail.com</p>
