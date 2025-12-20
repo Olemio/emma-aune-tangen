@@ -11,7 +11,7 @@ export default function Main() {
                     <ProductCard
                         img={monaLisa}
                         name={"Mona Lise"}
-                        price={"Super masse kroner!"}
+                        price={"99 992 NOK"}
                     />
                 ))}
             </div>

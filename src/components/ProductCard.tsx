@@ -8,11 +8,11 @@ export default function ProductCard({
     price?: string;
 }) {
     return (
-        <div className="flex flex-col bg-teal-100 p-2 rounded border border-gray-400">
-            <img className="rounded" src={`${img}`} alt="" />
-            <div className="flex justify-between items-center p-2">
-                <p>{name}</p>
-                <p className="text-sm">{price}</p>
+        <div className="flex flex-col rounded-lg border border-gray-400">
+            <img className="rounded-t" src={`${img}`} alt="" />
+            <div className="flex flex-col px-4 py-2 gap-1">
+                <p className="text-sm">{name}</p>
+                <p>{price}</p>
             </div>
         </div>
     );
