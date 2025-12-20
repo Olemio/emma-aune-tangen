@@ -1,13 +1,13 @@
 export default function Header() {
     return (
-        <header>
-            <div className="flex justify-between items-center mx-auto max-w-[1200px] py-4">
+        <header className="flex flex-col mb-8">
+            <div className="flex justify-between items-center py-4 mx-auto w-full max-w-[1200px]">
                 <p className="font-fustat text-2xl text-gray-700">
                     Emma Aune-Tangen
                 </p>
                 <p className="text-sm">emmaaunetangen@gmail.com</p>
             </div>
-            <div></div>
+            <div className="mx-auto h-[1px] w-full max-w-[1100px] rounded-lg bg-gray-400"></div>
         </header>
     );
 }
