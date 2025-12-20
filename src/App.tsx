@@ -7,7 +7,7 @@ function App() {
         <div className="page-wrapper">
             <Header />
 
-            <h1 className="text-lg">Mona Lisa Collection</h1>
+            <h1 className="text-lg bg-red-500">Mona Lisa Collection</h1>
 
             <div className="product-list">
                 {Array.from({ length: 100 }).map(() => (

@@ -1,3 +1,7 @@
+@import "tailwindcss";
+
+
+/* Delete css and rebuild with tailwind */
 :root {
     --bg: #FEFEFF;
     --color: #505050;
