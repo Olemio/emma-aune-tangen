@@ -25,8 +25,6 @@ export default function Main() {
                 )
             ) {
                 return [path, src];
-            } else {
-                return [];
             }
         });
         console.log(filteredImages);
@@ -39,14 +37,15 @@ export default function Main() {
 
     return (
         <main className="flex flex-col items-center mx-auto w-full max-w-[1000px]">
-            <h1 className="text-3xl mb-8">Portfølje</h1>
-
-            <input
-                className="bg-red-500"
-                placeholder="Søk i portfølje..."
-                type="text"
-                onChange={(e) => setSearchText(e.target.value)}
-            />
+            <div className="w-full flex justify-between mb-8">
+                <h1 className="text-3xl">Portfølje</h1>
+                <input
+                    className="border border-slate-300 rounded px-4 py-2"
+                    placeholder="Søk i portfølje..."
+                    type="text"
+                    onChange={(e) => setSearchText(e.target.value)}
+                />
+            </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full">
                 {productItems.map(([path, src]) => {
