@@ -8,11 +8,12 @@ const images = import.meta.glob("../image-library/*.jpg", {
 
 export default function Main() {
     const [searchText, setSearchText] = React.useState("");
-    const imageArray = Object.entries(images);
-    const [productItems, setProductItems] = React.useState(imageArray);
+    const [productItems, setProductItems] = React.useState(
+        Object.entries(images)
+    );
 
     const filterFunction = () => {
-        const filteredImages = imageArray.map(([path, src]) => {
+        const filteredImages = Object.entries(images).map(([path, src]) => {
             const name = path
                 .split("/")
                 .pop()
