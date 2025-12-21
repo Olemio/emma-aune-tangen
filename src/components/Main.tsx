@@ -13,7 +13,7 @@ export default function Main() {
     );
 
     const filterFunction = () => {
-        const filteredImages = Object.entries(images).map(([path, src]) => {
+        const filteredImages = Object.entries(images).filter(([path, src]) => {
             const name = path
                 .split("/")
                 .pop()
@@ -25,8 +25,11 @@ export default function Main() {
                 )
             ) {
                 return [path, src];
+            } else {
+                return [];
             }
         });
+        console.log(filteredImages);
         return filteredImages.filter(Boolean);
     };
 
