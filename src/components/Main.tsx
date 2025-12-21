@@ -1,5 +1,9 @@
 import ProductCard from "./ProductCard.tsx";
-import monaLisa from "../temp/mona-lisa-painting.jpg";
+
+const images = import.meta.glob("../image-library/*.jpg", {
+    eager: true,
+    import: "default",
+}) as Record<string, string>;
 
 export default function Main() {
     return (
@@ -7,13 +11,22 @@ export default function Main() {
             <h1 className="text-3xl mb-8">Mona Lisa Collection</h1>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full">
-                {Array.from({ length: 100 }).map(() => (
-                    <ProductCard
-                        img={monaLisa}
-                        name={'Orginal: "Mona Lise"'}
-                        price={"99 992 NOK"}
-                    />
-                ))}
+                {Object.entries(images).map(([path, src]) => {
+                    const name = path
+                        .split("/")
+                        .pop()
+                        ?.replace(".jpg", "")
+                        .replaceAll("-", " ");
+
+                    return (
+                        <ProductCard
+                            key={path}
+                            img={src}
+                            name={name}
+                            price="10 000 NOK"
+                        />
+                    );
+                })}
             </div>
         </main>
     );
