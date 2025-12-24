@@ -1,7 +1,7 @@
 import React from "react";
 import { auth, googleProvider } from "../config/firebase";
 import {
-    createUserWithEmailAndPassword,
+    // createUserWithEmailAndPassword,
     onAuthStateChanged,
     signInWithPopup,
     signOut,
@@ -41,8 +41,13 @@ export const Auth = () => {
                 <button onClick={signInWithGoogle}>Sign in with Google</button>
             ) : (
                 <>
-                    <button onClick={logout}>{user.displayName}</button>
-                    <img src={user.photoURL ?? ""} alt="profile" />
+                    <p className="">{user.displayName}</p>
+                    <img
+                        onClick={logout}
+                        className="rounded-full h-8 cursor-pointer"
+                        src={user.photoURL ?? ""}
+                        alt="profile"
+                    />
                 </>
             )}
         </>

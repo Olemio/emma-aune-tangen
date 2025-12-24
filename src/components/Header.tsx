@@ -9,7 +9,7 @@ export default function Header() {
                     <p className="font-fustat text-2xl">Emma Aune-Tangen</p>
                     <p className="text-sm">emmaaunetangen@gmail.com</p>
                 </div>
-                <div className="flex justify-end gap-2">
+                <div className="flex justify-end items-center gap-2">
                     {/* <button>Login with Google</button> */}
                     <Auth />
                 </div>
