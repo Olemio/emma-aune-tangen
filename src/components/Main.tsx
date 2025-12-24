@@ -35,7 +35,7 @@ export default function Main() {
     }, [searchText]);
 
     return (
-        <main className="flex flex-col items-center mx-auto w-full max-w-[1000px]">
+        <main className="flex flex-col items-center mx-auto w-full max-w-250">
             <div className="w-full flex justify-between mb-8">
                 <h1 className="text-3xl">Portfølje</h1>
                 <input
