@@ -1,3 +1,5 @@
+import { Auth } from "./auth";
+
 export default function Header() {
     return (
         <header className="flex flex-col mb-16 pt-4 mx-auto max-w-250">
@@ -7,8 +9,9 @@ export default function Header() {
                     <p className="font-fustat text-2xl">Emma Aune-Tangen</p>
                     <p className="text-sm">emmaaunetangen@gmail.com</p>
                 </div>
-                <div className="flex justify-end">
-                    <button>Login with Google</button>
+                <div className="flex justify-end gap-2">
+                    {/* <button>Login with Google</button> */}
+                    <Auth />
                 </div>
             </div>
 

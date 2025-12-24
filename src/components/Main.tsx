@@ -27,7 +27,6 @@ export default function Main() {
                 return [path, src];
             }
         });
-        console.log(filteredImages);
         return filteredImages.filter(Boolean);
     };
 
