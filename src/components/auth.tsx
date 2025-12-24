@@ -41,10 +41,10 @@ export const Auth = () => {
                 <button onClick={signInWithGoogle}>Sign in with Google</button>
             ) : (
                 <>
-                    <p className="">{user.displayName}</p>
+                    <p className="text-sm">{user.displayName}</p>
                     <img
                         onClick={logout}
-                        className="rounded-full h-8 cursor-pointer"
+                        className="rounded-full h-6 cursor-pointer"
                         src={user.photoURL ?? ""}
                         alt="profile"
                     />
