@@ -9,6 +9,7 @@ import {
 
 export const Auth = () => {
     const [user, setUser] = React.useState(auth.currentUser);
+    const [isOpen, setIsOpen] = React.useState(false);
 
     React.useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -40,15 +41,27 @@ export const Auth = () => {
             {!user ? (
                 <button onClick={signInWithGoogle}>Sign in with Google</button>
             ) : (
-                <>
-                    <p className="text-sm">{user.displayName}</p>
+                <div className="relative">
                     <img
-                        onClick={logout}
-                        className="rounded-full h-6 cursor-pointer"
+                        onClick={() => setIsOpen((prevIsOpen) => !prevIsOpen)}
+                        className="rounded-full h-8 cursor-pointer"
                         src={user.photoURL ?? ""}
                         alt="profile"
                     />
-                </>
+                    {isOpen && user.displayName ? (
+                        <div className="absolute flex flex-col gap-4 w-40 right-0 top-10 bg-slate-50 rounded border border-slate-200 p-4 text-sm">
+                            <p className="text-center truncate">
+                                {user.displayName}
+                            </p>
+                            <button
+                                className="rounded border border-slate-200 cursor-pointer"
+                                onClick={logout}
+                            >
+                                Logout
+                            </button>
+                        </div>
+                    ) : null}
+                </div>
             )}
         </>
     );
