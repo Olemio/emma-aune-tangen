@@ -39,7 +39,7 @@ export const Auth = () => {
     return (
         <>
             {!user ? (
-                <button onClick={signInWithGoogle}>Sign in with Google</button>
+                <button onClick={signInWithGoogle}>Logg inn</button>
             ) : (
                 <div className="relative">
                     <img
