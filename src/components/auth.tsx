@@ -39,7 +39,9 @@ export const Auth = () => {
     return (
         <>
             {!user ? (
-                <button onClick={signInWithGoogle}>Logg inn</button>
+                <button className="cursor-pointer" onClick={signInWithGoogle}>
+                    Logg inn
+                </button>
             ) : (
                 <div className="relative">
                     <img
