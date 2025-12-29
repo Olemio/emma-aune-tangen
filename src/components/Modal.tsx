@@ -6,10 +6,9 @@ export default function Modal({
     setOpenModal: (img: string | undefined) => void;
 }) {
     return (
-        <div className="fixed top-0 bg-slate-200/40 flex h-screen w-full justify-center items-center">
-            <div className="bg-slate-50 p-2">
+        <div className="fixed top-0 bg-slate-900/60 flex h-screen w-full justify-center items-center">
+            <div className="flex flex-col items-end bg-slate-100 px-6 py-4 rounded-lg gap-2 text-lg">
                 <button onClick={() => setOpenModal(undefined)}>Close</button>
-                hello: {image}
                 <img
                     className="rounded-t-lg aspect-3/4 object-cover"
                     src={`${image}`}
