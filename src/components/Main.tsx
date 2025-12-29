@@ -1,5 +1,6 @@
 import React from "react";
 import ProductCard from "./ProductCard.tsx";
+import Modal from "./Modal.tsx";
 
 const images = import.meta.glob("../image-library/*.jpg", {
     eager: true,
@@ -11,6 +12,7 @@ export default function Main() {
     const [productItems, setProductItems] = React.useState(
         Object.entries(images)
     );
+    const [openModal, setOpenModal] = React.useState<string | undefined>();
 
     const filterFunction = () => {
         const filteredImages = Object.entries(images).filter(([path, src]) => {
@@ -33,6 +35,8 @@ export default function Main() {
     React.useEffect(() => {
         setProductItems(filterFunction());
     }, [searchText]);
+
+    console.log(openModal);
 
     return (
         <main className="flex flex-col items-center mx-auto w-full max-w-250">
@@ -60,10 +64,14 @@ export default function Main() {
                             img={src}
                             name={name}
                             price="..."
+                            setOpenModal={setOpenModal}
                         />
                     );
                 })}
             </div>
+            {openModal ? (
+                <Modal image={openModal} setOpenModal={setOpenModal} />
+            ) : null}
         </main>
     );
 }

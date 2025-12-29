@@ -3,7 +3,7 @@ import Main from "./components/Main.tsx";
 
 function App() {
     return (
-        <div className="bg-slate-50 text-slate-900 px-4 min-h-screen">
+        <div className="bg-slate-50 text-slate-900 px-4 min-h-screen relative">
             <Header />
 
             <Main />

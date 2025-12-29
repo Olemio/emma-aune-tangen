@@ -2,13 +2,18 @@ export default function ProductCard({
     img,
     name,
     price,
+    setOpenModal,
 }: {
     img?: string;
     name?: string;
     price?: string;
+    setOpenModal: (img: string | undefined) => void;
 }) {
     return (
-        <div className="flex flex-col rounded-lg border border-slate-300">
+        <button
+            onClick={() => setOpenModal(img)}
+            className="flex flex-col rounded-lg border border-slate-300"
+        >
             <img
                 className="rounded-t-lg aspect-3/4 object-cover"
                 src={`${img}`}
@@ -18,6 +23,6 @@ export default function ProductCard({
                 <p className="text-sm">{name}</p>
                 <p>{price}</p>
             </div>
-        </div>
+        </button>
     );
 }
