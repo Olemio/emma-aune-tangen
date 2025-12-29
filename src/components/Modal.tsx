@@ -10,7 +10,7 @@ export default function Modal({
             <div className="flex flex-col items-end bg-slate-100 px-6 py-4 rounded-lg gap-2 text-lg">
                 <button onClick={() => setOpenModal(undefined)}>Close</button>
                 <img
-                    className="rounded-t-lg aspect-3/4 object-cover"
+                    className="rounded-lg aspect-3/4 object-cover"
                     src={`${image}`}
                     alt=""
                 />
