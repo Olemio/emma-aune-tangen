@@ -14,7 +14,7 @@ export default function Header() {
                 </div>
             </div>
 
-            <div className="h-px w-full rounded-lg bg-gray-400"></div>
+            <div className="h-px w-full rounded-lg bg-slate-300"></div>
         </header>
     );
 }
