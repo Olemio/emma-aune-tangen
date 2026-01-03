@@ -4,18 +4,15 @@ import { NavLink } from "react-router-dom";
 
 export default function Header() {
     return (
-        <header className="flex flex-col mb-15 mx-auto max-w-[1400px]">
+        <header className="flex flex-col mb-15 mx-auto max-w-[1400px] text-xl">
             <div className="flex justify-between items-center m-5">
                 <div>
                     <p className="font-title text-3xl text-slate-900">
                         Emma Aune-Tangen
                     </p>
-                    <p className="text-xl text-slate-500">
-                        emmaaunetangen@gmail.com
-                    </p>
+                    <p className="text-slate-500">emmaaunetangen@gmail.com</p>
                 </div>
-                <div className="flex justify-end items-center gap-2 col-start-3">
-                    {/* <button>Login with Google</button> */}
+                <div className="flex gap-10">
                     <NavLink
                         to="/"
                         className={({ isActive }) =>

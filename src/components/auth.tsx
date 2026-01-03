@@ -40,7 +40,7 @@ export const Auth = () => {
         <>
             {!user ? (
                 <button className="cursor-pointer" onClick={signInWithGoogle}>
-                    Logg inn
+                    SIGN INN
                 </button>
             ) : (
                 <div className="relative">
@@ -59,7 +59,7 @@ export const Auth = () => {
                                 className="rounded border border-slate-200 cursor-pointer"
                                 onClick={logout}
                             >
-                                Logout
+                                SIGN OUT
                             </button>
                         </div>
                     ) : null}
