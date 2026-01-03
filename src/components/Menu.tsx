@@ -41,7 +41,7 @@ export default function Menu() {
                         transition-all duration-300 ease-out
                         ${
                             isOpen
-                                ? "bg-amber-200 opacity-100"
+                                ? "bg-amber-200 dark:bg-[#191B1A] opacity-100"
                                 : "bg-amber-200/0 opacity-0 pointer-events-none"
                         }
                     `}
