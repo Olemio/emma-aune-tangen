@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { Auth } from "./auth";
 import { ThemeToggle } from "./ThemeToggle";
 import React from "react";
-import { Bars3BottomRightIcon } from "@heroicons/react/24/outline";
+import { Bars3BottomRightIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
 export default function Menu() {
     const [isOpen, setIsOpen] = React.useState(false);
@@ -55,7 +55,7 @@ export default function Menu() {
                         onClick={() => setIsOpen(false)}
                         className="text-2xl"
                     >
-                        Close
+                        <XMarkIcon className="h-20" />
                     </button>
                 </div>
                 <div className="flex flex-col items-center h-full w-full gap-20 mt-20">
