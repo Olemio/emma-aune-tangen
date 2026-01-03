@@ -23,7 +23,7 @@ export default function ProductCard({
                     className="w-full rounded-t transition-opacity duration-300 group-hover:opacity-80"
                 />
 
-                <div className="absolute inset-0 bg-amber-700/0 duration-300 group-hover:bg-amber-700/60" />
+                <div className="absolute rounded-t inset-0 bg-amber-700/0 duration-300 group-hover:bg-amber-700/60" />
 
                 <div className="absolute inset-0 flex items-center justify-center">
                     <span className="font-title font-semibold italic text-xl tracking-[0.2em] text-slate-50 opacity-0 translate-y-1 transition-all duration-100 group-hover:opacity-100 group-hover:translate-y-0">
