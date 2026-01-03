@@ -3,9 +3,11 @@ import ProductCard from "../components/ProductCard.tsx";
 import Modal from "../components/Modal.tsx";
 import { artworks, type Artwork } from "../data/artworks.ts";
 import { formatTitle } from "../utils/helpers.tsx";
+import Controls, { type SortKey } from "../components/Controls.tsx";
 
 export default function Main() {
     const [openModalId, setOpenModalId] = React.useState<string | undefined>();
+    const [sort, setSort] = React.useState<SortKey>("year-desc");
 
     const findArtworkById = (id: string | undefined): Artwork | undefined => {
         return artworks.find((artwork) => artwork.id === id);
@@ -16,10 +18,41 @@ export default function Main() {
         [openModalId]
     );
 
+    const visibleArtworks = React.useMemo(() => {
+        let list = artworks;
+
+        list = [...list].sort((a, b) => {
+            switch (sort) {
+                case "price-asc":
+                    return (a.price ?? Infinity) - (b.price ?? Infinity);
+                case "price-desc":
+                    return (b.price ?? Infinity) - (a.price ?? Infinity);
+                case "year-asc":
+                    return (a.year ?? Infinity) - (b.year ?? Infinity);
+                case "year-desc":
+                    return (b.year ?? -Infinity) - (a.year ?? -Infinity);
+                case "title-asc":
+                    return a.title.localeCompare(b.title);
+                case "title-desc":
+                    return b.title.localeCompare(a.title);
+            }
+        });
+
+        return list;
+    }, [sort]);
+
     return (
         <main className="mx-auto max-w-[1400px] px-5">
+            <Controls
+                sort={sort}
+                setSort={setSort}
+                onReset={() => {
+                    setSort("year-desc");
+                }}
+            />
+
             <div className="columns-2 md:columns-3 lg:columns-4 gap-2.5">
-                {artworks.map(({ id, src, title, price }) => {
+                {visibleArtworks.map(({ id, src, title, price }) => {
                     return (
                         <ProductCard
                             key={id}
