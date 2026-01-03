@@ -20,6 +20,9 @@ export const artworks: Artwork[] = [
     title: "Alene",
     src: images["../image-library/alene.jpg"],
     price: 3000,
+    sold: true,
+    year: 2023,
+    size: "40x50 cm",
   },
   {
     id: "appelsinen",
@@ -30,6 +33,8 @@ export const artworks: Artwork[] = [
     id: "bedrageri",
     title: "Bedrageri",
     src: images["../image-library/bedrageri.jpg"],
+    price: 2500,
+    size: "30x40 cm",
   },
   {
     id: "bla-gutt",

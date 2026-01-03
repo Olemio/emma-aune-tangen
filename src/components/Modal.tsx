@@ -30,7 +30,7 @@ export default function Modal({
                 />
                 <div className="flex w-full justify-between">
                     {data.price ? <p>{data.price}</p> : null}
-                    {data.sold ? <p>{data.sold}</p> : null}
+                    {data.sold ? <p>{data.sold ? "Sold" : null}</p> : null}
                     {data.year ? <p>{data.year}</p> : null}
                     {data.size ? <p>{data.size}</p> : null}
                 </div>
