@@ -31,7 +31,9 @@ export default function ProductCard({
             </div>
 
             <div className="flex px-2 pt-1 pb-6">
-                <p className="text-sm text-slate-300">{price}</p>
+                <p className="text-sm text-slate-500 dark:text-slate-300">
+                    {price}
+                </p>
             </div>
         </button>
     );
