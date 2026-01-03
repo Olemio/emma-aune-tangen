@@ -39,7 +39,7 @@ export default function Main() {
     console.log(openModal);
 
     return (
-        <main className="flex flex-col items-center mx-auto w-full max-w-250">
+        <main className="flex flex-col items-center mx-auto w-full max-w-[1400px]">
             <div className="w-full flex justify-between mb-8">
                 <h1 className="text-3xl">Portfølje</h1>
                 <input

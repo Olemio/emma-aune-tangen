@@ -1,14 +1,20 @@
-import Header from "./components/Header.tsx";
-import Main from "./components/Main.tsx";
+import { Routes, Route, Navigate } from "react-router-dom";
+import Header from "./components/Header";
+import Main from "./components/Main";
 
-function App() {
-    return (
-        <div className="bg-slate-50 text-slate-900 px-4 min-h-screen relative">
-            <Header />
-
-            <Main />
-        </div>
-    );
+function About() {
+    return <div className="p-6">About</div>;
 }
 
-export default App;
+export default function App() {
+    return (
+        <>
+            <Header />
+            <Routes>
+                <Route path="/" element={<Main />} />
+                <Route path="/about" element={<About />} />
+                <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
+        </>
+    );
+}
