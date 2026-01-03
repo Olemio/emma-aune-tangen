@@ -18,7 +18,7 @@ export default function Header() {
                     <NavLink
                         to="/"
                         className={({ isActive }) =>
-                            isActive ? "text-amber-700" : ""
+                            isActive ? "text-teal-700" : ""
                         }
                     >
                         PORTFOLIO
@@ -26,7 +26,7 @@ export default function Header() {
                     <NavLink
                         to="/about"
                         className={({ isActive }) =>
-                            isActive ? "text-amber-700" : ""
+                            isActive ? "text-teal-700" : ""
                         }
                     >
                         ABOUT

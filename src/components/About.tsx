@@ -3,7 +3,7 @@ export default function About() {
         <main className="mx-auto max-w-[1400px] px-5">
             <div className="grid grid-cols-2 gap-16">
                 <div className="flex flex-col justify-center items-center gap-8">
-                    <h1 className="text-3xl text-amber-700">Hello!</h1>
+                    <h1 className="text-3xl text-teal-700">Hello!</h1>
                     <p>
                         I am an artist from Oslo, Norway. Wtf do you write here.
                         The big one in the picture is me. Actually im just
