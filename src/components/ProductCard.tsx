@@ -1,23 +1,25 @@
 export default function ProductCard({
-    img,
-    name,
+    id,
+    src,
+    title,
     price,
     setOpenModal,
 }: {
-    img?: string;
-    name?: string;
+    id: string;
+    src: string;
+    title: string;
     price?: string;
-    setOpenModal: (img: string | undefined) => void;
+    setOpenModal: (src: string | undefined) => void;
 }) {
     return (
         <button
-            onClick={() => setOpenModal(img)}
+            onClick={() => setOpenModal(src)}
             className="group flex flex-col cursor-pointer"
         >
             <div className="relative">
                 <img
-                    src={img}
-                    alt={name}
+                    src={src}
+                    alt={title}
                     className="w-full transition-opacity duration-300 group-hover:opacity-80"
                 />
 
@@ -25,7 +27,7 @@ export default function ProductCard({
 
                 <div className="absolute inset-0 flex items-center justify-center">
                     <span className="font-title font-semibold italic text-xl tracking-[0.2em] text-slate-50 opacity-0 translate-y-1 transition-all duration-100 group-hover:opacity-100 group-hover:translate-y-0">
-                        {name}
+                        {title}
                     </span>
                 </div>
             </div>

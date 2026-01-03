@@ -5,8 +5,12 @@ import { artworks } from "../data/artworks.ts";
 
 export default function Main() {
     const [openModal, setOpenModal] = React.useState<string | undefined>();
+
     const formatTitle = (title: string) => {
-        return title.split("/").pop()?.replace(".jpg", "").replaceAll("-", " ");
+        return (
+            title.split("/").pop()?.replace(".jpg", "").replaceAll("-", " ") ||
+            title
+        );
     };
 
     return (
@@ -16,8 +20,9 @@ export default function Main() {
                     return (
                         <ProductCard
                             key={id}
-                            img={src}
-                            name={formatTitle(title)}
+                            id={id}
+                            src={src}
+                            title={formatTitle(title)}
                             price="12.000,00 NOK"
                             setOpenModal={setOpenModal}
                         />
