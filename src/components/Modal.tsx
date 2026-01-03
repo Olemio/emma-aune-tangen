@@ -6,12 +6,18 @@ export default function Modal({
     setOpenModal: (img: string | undefined) => void;
 }) {
     return (
-        <div className="fixed top-0 bg-slate-900/60 flex h-screen w-full justify-center items-center">
-            <div className="flex flex-col items-end bg-slate-100 px-6 py-4 rounded-lg gap-2 text-lg">
+        <div
+            className="fixed inset-0 bg-slate-900/70 flex items-center justify-center"
+            onClick={() => setOpenModal(undefined)}
+        >
+            <div
+                className="flex flex-col items-end bg-slate-100 px-6 py-4 rounded-lg gap-2 text-lg max-h-[80vh] max-w-[80vw]"
+                onClick={(e) => e.stopPropagation()}
+            >
                 <button onClick={() => setOpenModal(undefined)}>Close</button>
                 <img
-                    className="rounded-lg aspect-3/4 object-cover"
-                    src={`${image}`}
+                    className="rounded-lg object-contain max-h-[70vh]"
+                    src={image}
                     alt=""
                 />
             </div>
