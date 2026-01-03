@@ -17,7 +17,7 @@ const images = import.meta.glob(
 export const artworks: Artwork[] = [
   {
     id: "alene",
-    title: "Alene",
+    title: "Bilde 1",
     src: images["../image-library/alene.jpg"],
     price: 3000,
     sold: true,
@@ -26,7 +26,7 @@ export const artworks: Artwork[] = [
   },
   {
     id: "appelsinen",
-    title: "Appelsinen",
+    title: "Bilde 2",
     src: images["../image-library/appelsinen.jpg"],
     price: 3000,
     sold: true,
@@ -35,19 +35,19 @@ export const artworks: Artwork[] = [
   },
   {
     id: "bedrageri",
-    title: "Bedrageri",
+    title: "Bilde 3",
     src: images["../image-library/bedrageri.jpg"],
     price: 2500,
     size: "30x40 cm",
   },
   {
     id: "bla-gutt",
-    title: "Blå gutt",
+    title: "Bilde 4",
     src: images["../image-library/blå-gutt.jpg"],
   },
   {
     id: "identitet",
-    title: "Identitet",
+    title: "Bilde 5",
     src: images["../image-library/identitet.jpg"],
     price: 3000,
     sold: true,
@@ -56,17 +56,17 @@ export const artworks: Artwork[] = [
   },
   {
     id: "kjokkenet",
-    title: "Kjøkkenet",
+    title: "Bilde 6",
     src: images["../image-library/kjøkkenet.jpg"],
   },
   {
     id: "liksom",
-    title: "Liksom",
+    title: "Bilde 7",
     src: images["../image-library/liksom.jpg"],
   },
   {
     id: "oransje-soloppgang",
-    title: "Oransje soloppgang",
+    title: "Bilde 8",
     src: images["../image-library/oransje-soloppgang.jpg"],
     price: 3000,
     sold: true,
@@ -75,17 +75,17 @@ export const artworks: Artwork[] = [
   },
   {
     id: "pust",
-    title: "Pust",
+    title: "Bilde 9",
     src: images["../image-library/pust.jpg"],
   },
   {
     id: "regnbuer",
-    title: "Regnbuer",
+    title: "Bilde 10",
     src: images["../image-library/regnbuer.jpg"],
   },
   {
     id: "snølandskap",
-    title: "Snølandskap",
+    title: "Bilde 11",
     src: images["../image-library/snølandskap.jpg"],
     price: 3000,
     sold: true,
@@ -94,7 +94,7 @@ export const artworks: Artwork[] = [
   },
   {
     id: "stfu",
-    title: "STFU",
+    title: "Bilde 12",
     src: images["../image-library/stfu.jpg"],
     price: 3000,
     sold: true,
@@ -103,7 +103,7 @@ export const artworks: Artwork[] = [
   },
   {
     id: "svømming",
-    title: "Svømming",
+    title: "Bilde 13",
     src: images["../image-library/svømming.jpg"],
     price: 3000,
     sold: true,
@@ -112,7 +112,7 @@ export const artworks: Artwork[] = [
   },
   {
     id: "voksen",
-    title: "Voksen",
+    title: "Bilde 14",
     src: images["../image-library/voksen.jpg"],
   },
 ];
