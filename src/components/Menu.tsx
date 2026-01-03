@@ -8,6 +8,7 @@ export default function Menu() {
     const [isOpen, setIsOpen] = React.useState(false);
     return (
         <>
+            {/* Desktop  */}
             <div className="hidden md:flex gap-10 dark:text-slate-200">
                 <NavLink
                     to="/"
@@ -29,6 +30,7 @@ export default function Menu() {
                 <ThemeToggle />
             </div>
 
+            {/* Mobile  */}
             <button onClick={() => setIsOpen(true)} className="md:hidden flex">
                 <Bars3BottomRightIcon className="h-8 w-8 text-slate-900 dark:text-slate-100" />
             </button>
@@ -49,7 +51,12 @@ export default function Menu() {
                         <Auth />
                         <ThemeToggle />
                     </div>
-                    <button onClick={() => setIsOpen(false)}>Close</button>
+                    <button
+                        onClick={() => setIsOpen(false)}
+                        className="text-2xl"
+                    >
+                        Close
+                    </button>
                 </div>
                 <div className="flex flex-col items-center h-full w-full gap-20 mt-20">
                     <NavLink
