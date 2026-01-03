@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { Auth } from "./auth";
+// import { Auth } from "./auth";
 import { ThemeToggle } from "./ThemeToggle";
 import React from "react";
 import { Bars3BottomRightIcon, XMarkIcon } from "@heroicons/react/24/outline";
@@ -26,7 +26,7 @@ export default function Menu() {
                 >
                     ABOUT
                 </NavLink>
-                <Auth />
+                {/* <Auth /> */}
                 <ThemeToggle />
             </div>
 
@@ -48,7 +48,7 @@ export default function Menu() {
             >
                 <div className="flex justify-between p-8 w-full">
                     <div className="flex items-center gap-8">
-                        <Auth />
+                        {/* <Auth /> */}
                         <ThemeToggle />
                     </div>
                     <button

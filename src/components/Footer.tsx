@@ -5,6 +5,8 @@ export default function Footer() {
             <a href="mailto:emmaaunetangen@gmail.com">
                 emmaaunetangen@gmail.com
             </a>
+            <p>© Emma Aune-Tangen {new Date().getFullYear()}</p>
+            <p>Instagram: emmaaekkeemo</p>
         </footer>
     );
 }
