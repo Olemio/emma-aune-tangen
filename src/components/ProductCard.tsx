@@ -9,7 +9,7 @@ export default function ProductCard({
     src: string;
     title: string;
     price?: number;
-    setOpenModal: (src: string | undefined) => void;
+    setOpenModal: (id: string | undefined) => void;
 }) {
     return (
         <button
