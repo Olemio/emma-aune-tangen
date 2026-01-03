@@ -3,17 +3,17 @@ export default function ProductCard({
     src,
     title,
     price,
-    setOpenModal,
+    setOpenModalId,
 }: {
     id: string;
     src: string;
     title: string;
     price?: number;
-    setOpenModal: (id: string | undefined) => void;
+    setOpenModalId: (id: string | undefined) => void;
 }) {
     return (
         <button
-            onClick={() => setOpenModal(id)}
+            onClick={() => setOpenModalId(id)}
             className="group flex flex-col cursor-pointer mb-2.5"
         >
             <div className="relative">

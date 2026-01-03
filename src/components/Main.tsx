@@ -1,11 +1,20 @@
 import React from "react";
 import ProductCard from "./ProductCard.tsx";
 import Modal from "./Modal.tsx";
-import { artworks } from "../data/artworks.ts";
+import { artworks, type Artwork } from "../data/artworks.ts";
 import { formatTitle } from "../utils/helpers.tsx";
 
 export default function Main() {
-    const [openModal, setOpenModal] = React.useState<string | undefined>();
+    const [openModalId, setOpenModalId] = React.useState<string | undefined>();
+
+    const findArtworkById = (id: string | undefined): Artwork | undefined => {
+        return artworks.find((artwork) => artwork.id === id);
+    };
+
+    const selectedArtwork = React.useMemo(
+        () => findArtworkById(openModalId),
+        [openModalId]
+    );
 
     return (
         <main className="mx-auto max-w-[1400px] px-5">
@@ -18,14 +27,14 @@ export default function Main() {
                             src={src}
                             title={formatTitle(title)}
                             price={price}
-                            setOpenModal={setOpenModal}
+                            setOpenModalId={setOpenModalId}
                         />
                     );
                 })}
             </div>
 
-            {openModal ? (
-                <Modal image={openModal} setOpenModal={setOpenModal} />
+            {selectedArtwork ? (
+                <Modal data={selectedArtwork} setOpenModalId={setOpenModalId} />
             ) : null}
         </main>
     );
