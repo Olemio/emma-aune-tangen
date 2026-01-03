@@ -14,7 +14,7 @@ export default function Modal({
             onClick={() => setOpenModalId(undefined)}
         >
             <div
-                className="flex flex-col md:flex-row bg-slate-50 dark:bg-[#191B1A] max-w-[90vw] max-h-[90vh] overflow-hidden"
+                className="flex flex-col rounded md:flex-row bg-slate-50 dark:bg-[#191B1A] max-w-[90vw] max-h-[90vh] overflow-hidden"
                 onClick={(e) => e.stopPropagation()}
             >
                 <div className="w-[min(90vw,1100px)]  bg-slate-100 dark:bg-black/30 flex items-center justify-center">
@@ -24,22 +24,29 @@ export default function Modal({
                         alt={data.title}
                     />
                 </div>
-                <div className="flex flex-col p-6 min-w-[260px]">
+                <div className="flex flex-col items-center gap-8 p-6 min-w-[260px]">
                     <button
-                        className="cursor-pointer"
+                        className="cursor-pointer self-end"
                         onClick={() => setOpenModalId(undefined)}
                     >
                         <XMarkIcon className="h-8" />
                     </button>
 
-                    <p>{data.title}</p>
+                    <h1 className="text-3xl font-title italic font-bold text-amber-700">
+                        {data.title}
+                    </h1>
 
-                    <div className="flex w-full justify-between">
-                        {data.price ? <p>{data.price}</p> : null}
-                        {data.sold ? <p>{data.sold ? "Sold" : null}</p> : null}
-                        {data.year ? <p>{data.year}</p> : null}
-                        {data.size ? <p>{data.size}</p> : null}
-                    </div>
+                    {data.price || data.sold || data.year || data.size ? (
+                        <div className="flex flex-col items-center gap-4 m-auto">
+                            <h2 className="text-xl">About artwork</h2>
+                            {data.price ? <p>{data.price}</p> : null}
+                            {data.sold ? (
+                                <p>{data.sold ? "Sold" : null}</p>
+                            ) : null}
+                            {data.year ? <p>{data.year}</p> : null}
+                            {data.size ? <p>{data.size}</p> : null}
+                        </div>
+                    ) : null}
                 </div>
             </div>
         </div>
