@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-	--font-fustat: "Fustat", sans-serif;
 	--font-sans: "Jost", sans-serif;
+	--font-title: "Spectral SC", serif;
 }
