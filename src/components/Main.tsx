@@ -61,7 +61,7 @@ export default function Main() {
                             key={path}
                             img={src}
                             name={name}
-                            price="12 000 NOK"
+                            price="12.000,00 NOK"
                             setOpenModal={setOpenModal}
                         />
                     );
