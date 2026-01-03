@@ -6,14 +6,16 @@ import Footer from "./layout/Footer.tsx";
 
 export default function App() {
     return (
-        <>
-            <Header />
-            <Routes>
-                <Route path="/" element={<Main />} />
-                <Route path="/about" element={<About />} />
-                <Route path="*" element={<Navigate to="/" replace />} />
-            </Routes>
+        <div className="min-h-screen flex flex-col">
+            <div className="flex-1">
+                <Header />
+                <Routes>
+                    <Route path="/" element={<Main />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="*" element={<Navigate to="/" replace />} />
+                </Routes>
+            </div>
             <Footer />
-        </>
+        </div>
     );
 }
