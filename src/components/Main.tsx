@@ -16,14 +16,14 @@ export default function Main() {
     return (
         <main className="mx-auto max-w-[1400px] px-5">
             <div className="columns-2 md:columns-3 lg:columns-4 gap-2.5">
-                {artworks.map(({ id, src, title }) => {
+                {artworks.map(({ id, src, title, price }) => {
                     return (
                         <ProductCard
                             key={id}
                             id={id}
                             src={src}
                             title={formatTitle(title)}
-                            price="12.000,00 NOK"
+                            price={price}
                             setOpenModal={setOpenModal}
                         />
                     );

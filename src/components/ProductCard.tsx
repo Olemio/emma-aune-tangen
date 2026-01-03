@@ -8,13 +8,13 @@ export default function ProductCard({
     id: string;
     src: string;
     title: string;
-    price?: string;
+    price?: number;
     setOpenModal: (src: string | undefined) => void;
 }) {
     return (
         <button
-            onClick={() => setOpenModal(src)}
-            className="group flex flex-col cursor-pointer"
+            onClick={() => setOpenModal(id)}
+            className="group flex flex-col cursor-pointer mb-2.5"
         >
             <div className="relative">
                 <img
@@ -32,11 +32,13 @@ export default function ProductCard({
                 </div>
             </div>
 
-            <div className="flex px-2 pt-1 pb-6">
-                <p className="text-sm text-slate-500 dark:text-slate-300">
-                    {price}
-                </p>
-            </div>
+            {price ? (
+                <div className="flex p-2.5">
+                    <p className="text-sm text-slate-500 dark:text-slate-300">
+                        {price} NOK
+                    </p>
+                </div>
+            ) : null}
         </button>
     );
 }

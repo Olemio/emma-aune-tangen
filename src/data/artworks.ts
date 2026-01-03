@@ -19,6 +19,7 @@ export const artworks: Artwork[] = [
     id: "alene",
     title: "Alene",
     src: images["../image-library/alene.jpg"],
+    price: 3000,
   },
   {
     id: "appelsinen",
