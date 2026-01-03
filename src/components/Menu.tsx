@@ -42,6 +42,7 @@ export default function Menu() {
                     </div>
                     <div className="flex flex-col items-center h-full w-full gap-20 mt-20">
                         <NavLink
+                            onClick={() => setIsOpen(false)}
                             to="/"
                             className={({ isActive }) =>
                                 isActive
@@ -52,6 +53,7 @@ export default function Menu() {
                             PORTFOLIO
                         </NavLink>
                         <NavLink
+                            onClick={() => setIsOpen(false)}
                             to="/about"
                             className={({ isActive }) =>
                                 isActive
