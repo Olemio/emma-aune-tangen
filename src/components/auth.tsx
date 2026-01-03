@@ -46,7 +46,7 @@ export const Auth = () => {
                 <div className="relative">
                     <img
                         onClick={() => setIsOpen((prevIsOpen) => !prevIsOpen)}
-                        className="rounded-full h-8 cursor-pointer"
+                        className="rounded-full h-16 md:h-8 cursor-pointer"
                         src={user.photoURL ?? ""}
                         alt="profile"
                     />
