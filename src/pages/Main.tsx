@@ -64,7 +64,7 @@ export default function Main() {
             />
 
             <div className="columns-2 md:columns-3 lg:columns-4 gap-2.5">
-                {visibleArtworks.map(({ id, src, title, price }) => {
+                {visibleArtworks.map(({ id, src, title, price, year }) => {
                     return (
                         <ProductCard
                             key={id}
@@ -72,6 +72,7 @@ export default function Main() {
                             src={src}
                             title={formatTitle(title)}
                             price={price}
+                            year={year}
                             setOpenModalId={setOpenModalId}
                         />
                     );

@@ -5,12 +5,14 @@ export default function ProductCard({
     src,
     title,
     price,
+    year,
     setOpenModalId,
 }: {
     id: string;
     src: string;
     title: string;
     price?: number;
+    year?: number;
     setOpenModalId: (id: string | undefined) => void;
 }) {
     return (
@@ -35,9 +37,12 @@ export default function ProductCard({
             </div>
 
             {price ? (
-                <div className="flex border border-t-0 border-slate-300 rounded-b-lg p-2">
+                <div className="flex justify-between items-center border border-t-0 border-slate-300 rounded-b-lg p-2">
                     <p className="text-sm text-slate-500 dark:text-slate-300">
                         {formatNOK(price)}
+                    </p>
+                    <p className="text-xs text-slate-500/80 dark:text-slate-300/80">
+                        {year}
                     </p>
                 </div>
             ) : null}
