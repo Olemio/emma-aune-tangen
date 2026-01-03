@@ -10,15 +10,22 @@ type Props = {
     sort: SortKey;
     setSort: (v: SortKey) => void;
 
+    search: string;
+    setSearch: (v: string) => void;
+
     onReset: () => void;
 };
 
-export default function Controls({ sort, setSort, onReset }: Props) {
+export default function Controls({
+    sort,
+    setSort,
+    search,
+    setSearch,
+    onReset,
+}: Props) {
     return (
-        <div className="flex justify-between px-4 py-2 text-sm">
-            <div className="flex gap-2">
-                <p>Sort</p>
-
+        <div className="grid grid-cols-3 px-4 py-2 text-sm">
+            <div>
                 <select
                     value={sort}
                     onChange={(e) => setSort(e.target.value as SortKey)}
@@ -32,7 +39,16 @@ export default function Controls({ sort, setSort, onReset }: Props) {
                 </select>
             </div>
 
-            <button onClick={onReset}>Reset</button>
+            <input
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                placeholder="Search…"
+                className="text-center border-b border-slate-300 focus:outline-none"
+            />
+
+            <div className="flex justify-end">
+                <button onClick={onReset}>Reset</button>
+            </div>
         </div>
     );
 }

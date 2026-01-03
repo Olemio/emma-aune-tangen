@@ -8,6 +8,7 @@ import Controls, { type SortKey } from "../components/Controls.tsx";
 export default function Main() {
     const [openModalId, setOpenModalId] = React.useState<string | undefined>();
     const [sort, setSort] = React.useState<SortKey>("year-desc");
+    const [search, setSearch] = React.useState<string>("");
 
     const findArtworkById = (id: string | undefined): Artwork | undefined => {
         return artworks.find((artwork) => artwork.id === id);
@@ -19,7 +20,11 @@ export default function Main() {
     );
 
     const visibleArtworks = React.useMemo(() => {
-        let list = artworks;
+        const q = search.trim().toLowerCase();
+
+        let list = artworks.filter((a) =>
+            q ? a.title.toLowerCase().includes(q) : true
+        );
 
         list = [...list].sort((a, b) => {
             switch (sort) {
@@ -39,15 +44,18 @@ export default function Main() {
         });
 
         return list;
-    }, [sort]);
+    }, [sort, search]);
 
     return (
         <main className="mx-auto max-w-[1400px] px-5">
             <Controls
                 sort={sort}
                 setSort={setSort}
+                search={search}
+                setSearch={setSearch}
                 onReset={() => {
                     setSort("year-desc");
+                    setSearch("");
                 }}
             />
 
