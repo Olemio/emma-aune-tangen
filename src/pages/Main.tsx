@@ -64,19 +64,22 @@ export default function Main() {
             />
 
             <div className="columns-2 md:columns-3 lg:columns-4 gap-2.5">
-                {visibleArtworks.map(({ id, src, title, price, year }) => {
-                    return (
-                        <ProductCard
-                            key={id}
-                            id={id}
-                            src={src}
-                            title={formatTitle(title)}
-                            price={price}
-                            year={year}
-                            setOpenModalId={setOpenModalId}
-                        />
-                    );
-                })}
+                {visibleArtworks.map(
+                    ({ id, src, title, price, year, size }) => {
+                        return (
+                            <ProductCard
+                                key={id}
+                                id={id}
+                                src={src}
+                                title={formatTitle(title)}
+                                price={price}
+                                year={year}
+                                size={size}
+                                setOpenModalId={setOpenModalId}
+                            />
+                        );
+                    }
+                )}
             </div>
 
             {selectedArtwork ? (
