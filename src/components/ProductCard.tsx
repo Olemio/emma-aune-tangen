@@ -35,7 +35,7 @@ export default function ProductCard({
                     <span className="font-title font-semibold italic text-xl tracking-[0.2em] text-slate-50 opacity-0 translate-y-1 transition-all duration-100 group-hover:opacity-100 group-hover:translate-y-0">
                         {title}
                     </span>
-                    <span className="font-title text-xs italic tracking-[0.1em] text-slate-50/60 opacity-0 translate-y-1 transition-all duration-100 group-hover:opacity-100 group-hover:translate-y-0">
+                    <span className="absolute bottom-2 font-title text-xs italic tracking-[0.1em] text-slate-50/60 opacity-0 translate-y-1 transition-all duration-100 group-hover:opacity-100 group-hover:translate-y-0">
                         {size}
                     </span>
                 </div>
