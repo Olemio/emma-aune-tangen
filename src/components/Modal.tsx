@@ -10,14 +10,14 @@ export default function Modal({
 }) {
     return (
         <div
-            className="fixed inset-0 bg-amber-900/20 flex items-center justify-center p-4 md:p-8"
+            className="fixed inset-0 bg-amber-900/50 backdrop-blur-xs flex items-center justify-center p-4 md:p-8"
             onClick={() => setOpenModalId(undefined)}
         >
             <div
-                className="flex bg-slate-50 dark:bg-[#191B1A] max-w-[90vw] max-h-[90vh] overflow-hidden"
+                className="flex flex-col md:flex-row bg-slate-50 dark:bg-[#191B1A] max-w-[90vw] max-h-[90vh] overflow-hidden"
                 onClick={(e) => e.stopPropagation()}
             >
-                <div className="w-[min(90vw,1100px)] h-[min(80vh,800px)] bg-slate-100 dark:bg-black/30 flex items-center justify-center">
+                <div className="w-[min(90vw,1100px)]  bg-slate-100 dark:bg-black/30 flex items-center justify-center">
                     <img
                         className="w-full h-full object-contain"
                         src={data.src}
