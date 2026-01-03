@@ -1,10 +1,6 @@
 export default {
-    theme: {
-        extend: {
-            fontFamily: {
-                fustat: ['"Fustat"', "sans-serif"],
-            },
-        },
-    },
+    darkMode: "class",
+    content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+    theme: { extend: {} },
     plugins: [],
 };

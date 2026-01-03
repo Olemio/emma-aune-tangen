@@ -1,18 +1,20 @@
 import { Auth } from "./auth";
-import { MoonIcon } from "@heroicons/react/24/outline";
 import { NavLink } from "react-router-dom";
+import { ThemeToggle } from "./ThemeToggle.tsx";
 
 export default function Header() {
     return (
         <header className="flex flex-col mb-10 mx-auto max-w-[1400px] text-xl">
             <div className="flex justify-between items-center m-5">
                 <div>
-                    <p className="font-title text-3xl text-slate-900">
+                    <p className="font-title text-3xl dark:text-slate-50 text-slate-900">
                         Emma Aune-Tangen
                     </p>
-                    <p className="text-slate-500">emmaaunetangen@gmail.com</p>
+                    <p className="text-slate-500 dark:text-slate-200">
+                        emmaaunetangen@gmail.com
+                    </p>
                 </div>
-                <div className="flex gap-10">
+                <div className="flex gap-10 dark:text-slate-100">
                     <NavLink
                         to="/"
                         className={({ isActive }) =>
@@ -30,7 +32,7 @@ export default function Header() {
                         ABOUT
                     </NavLink>
                     <Auth />
-                    <MoonIcon className="h-6 w-6 cursor-pointer" />
+                    <ThemeToggle />
                 </div>
             </div>
         </header>

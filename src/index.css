@@ -1,11 +1,18 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
 	--font-sans: "Jost", sans-serif;
 	--font-title: "Spectral SC", serif;
 }
 
-body {
+html {
 	background-color: #f8fafc;
 	color: #334155;
+}
+
+html.dark {
+	background-color: #191B1A;
+	color: #e2e8f0;
 }
