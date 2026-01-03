@@ -48,7 +48,7 @@ export default function Main() {
                 />
             </div> */}
 
-            <div className="columns-2 md:columns-3 lg:columns-4 gap-10">
+            <div className="columns-2 md:columns-3 lg:columns-4 gap-5">
                 {Object.entries(images).map(([path, src]) => {
                     const name = path
                         .split("/")
