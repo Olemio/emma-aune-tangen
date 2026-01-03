@@ -8,9 +8,12 @@ export default function Header() {
                     <p className="font-title text-3xl dark:text-slate-100 text-slate-900">
                         Emma Aune-Tangen
                     </p>
-                    <p className="text-slate-500 dark:text-slate-300">
+                    <a
+                        className="text-slate-500 dark:text-slate-300"
+                        href="mailto:emmaaunetangen@gmail.com"
+                    >
                         emmaaunetangen@gmail.com
-                    </p>
+                    </a>
                 </div>
                 <Menu />
             </div>
