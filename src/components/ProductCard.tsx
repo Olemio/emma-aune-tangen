@@ -20,7 +20,7 @@ export default function ProductCard({
                 <img
                     src={src}
                     alt={title}
-                    className="w-full transition-opacity duration-300 group-hover:opacity-80"
+                    className="w-full rounded-t transition-opacity duration-300 group-hover:opacity-80"
                 />
 
                 <div className="absolute inset-0 bg-amber-700/0 duration-300 group-hover:bg-amber-700/60" />
@@ -33,7 +33,7 @@ export default function ProductCard({
             </div>
 
             {price ? (
-                <div className="flex bg-amber-100 rounded p-2.5">
+                <div className="flex border border-t-0 border-slate-500 rounded-b-lg p-2">
                     <p className="text-sm text-slate-500 dark:text-slate-300">
                         {price} NOK
                     </p>
