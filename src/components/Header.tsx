@@ -1,4 +1,5 @@
 import { Auth } from "./auth";
+import { SunIcon, MoonIcon } from "@heroicons/react/24/solid";
 
 export default function Header() {
     return (
@@ -11,6 +12,8 @@ export default function Header() {
                 <div className="flex justify-end items-center gap-2 col-start-3">
                     {/* <button>Login with Google</button> */}
                     <Auth />
+                    <SunIcon className="h-6 w-6 cursor-pointer text-slate-700" />
+                    <MoonIcon className="h-6 w-6 cursor-pointer text-slate-700" />
                 </div>
             </div>
 
