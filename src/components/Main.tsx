@@ -9,9 +9,9 @@ const images = import.meta.glob("../image-library/*.jpg", {
 
 export default function Main() {
     // const [searchText, setSearchText] = React.useState("");
-    const [productItems, setProductItems] = React.useState(
-        Object.entries(images)
-    );
+    // const [productItems, setProductItems] = React.useState(
+    //     Object.entries(images)
+    // );
     const [openModal, setOpenModal] = React.useState<string | undefined>();
 
     // const filterFunction = () => {
@@ -49,7 +49,7 @@ export default function Main() {
             </div> */}
 
             <div className="columns-2 md:columns-3 lg:columns-4 gap-10">
-                {productItems.map(([path, src]) => {
+                {Object.entries(images).map(([path, src]) => {
                     const name = path
                         .split("/")
                         .pop()
