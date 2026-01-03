@@ -1,3 +1,5 @@
+import { formatNOK } from "../utils/helpers";
+
 export default function ProductCard({
     id,
     src,
@@ -35,7 +37,7 @@ export default function ProductCard({
             {price ? (
                 <div className="flex border border-t-0 border-slate-300 rounded-b-lg p-2">
                     <p className="text-sm text-slate-500 dark:text-slate-300">
-                        {price} NOK
+                        {formatNOK(price)}
                     </p>
                 </div>
             ) : null}

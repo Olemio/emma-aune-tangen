@@ -1,5 +1,6 @@
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import type { Artwork } from "../data/artworks";
+import { formatNOK } from "../utils/helpers";
 
 export default function Modal({
     data,
@@ -39,7 +40,7 @@ export default function Modal({
                     {data.price || data.sold || data.year || data.size ? (
                         <div className="flex flex-col items-center gap-4 m-auto">
                             <h2 className="text-xl">About artwork</h2>
-                            {data.price ? <p>{data.price}</p> : null}
+                            {data.price ? <p>{formatNOK(data.price)}</p> : null}
                             {data.sold ? (
                                 <p>{data.sold ? "Sold" : null}</p>
                             ) : null}
