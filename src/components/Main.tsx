@@ -50,7 +50,7 @@ export default function Main() {
                 />
             </div>
 
-            <div className="columns-2 md:columns-3 gap-6 w-full">
+            <div className="columns-2 md:columns-3 lg:columns-4 gap-6 w-full">
                 {productItems.map(([path, src]) => {
                     const name = path
                         .split("/")
