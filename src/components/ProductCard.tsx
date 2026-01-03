@@ -12,10 +12,10 @@ export default function ProductCard({
     return (
         <button
             onClick={() => setOpenModal(img)}
-            className="flex flex-col rounded-lg border border-slate-300"
+            className="flex flex-col rounded-lg"
         >
-            <img className="rounded-t-lg object-cover" src={`${img}`} alt="" />
-            <div className="flex flex-col px-4 py-5 gap-1">
+            <img className="rounded object-cover" src={`${img}`} alt="" />
+            <div className="flex flex-col items-start px-4 py-5 gap-1">
                 <p className="text-sm">{name}</p>
                 <p>{price}</p>
             </div>
