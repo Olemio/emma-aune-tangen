@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import { Auth } from "./auth";
 import { ThemeToggle } from "./ThemeToggle";
 import React from "react";
+import { Bars3BottomRightIcon } from "@heroicons/react/24/outline";
 
 export default function Menu() {
     const [isOpen, setIsOpen] = React.useState(false);
@@ -29,7 +30,7 @@ export default function Menu() {
             </div>
 
             <button onClick={() => setIsOpen(true)} className="md:hidden flex">
-                ☰
+                <Bars3BottomRightIcon className="h-8 w-8 text-slate-900 dark:text-slate-100" />
             </button>
             {isOpen ? (
                 <div className="fixed flex flex-col items-center bg-amber-200/95 inset-0 z-50">
