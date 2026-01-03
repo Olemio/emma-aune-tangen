@@ -1,5 +1,5 @@
 import { Auth } from "./auth";
-import { SunIcon, MoonIcon } from "@heroicons/react/24/outline";
+import { MoonIcon } from "@heroicons/react/24/outline";
 import { NavLink } from "react-router-dom";
 
 export default function Header() {
@@ -16,7 +16,7 @@ export default function Header() {
                     <NavLink
                         to="/"
                         className={({ isActive }) =>
-                            isActive ? "text-amber-700 underline" : ""
+                            isActive ? "text-amber-700" : ""
                         }
                     >
                         PORTFOLIO
@@ -24,7 +24,7 @@ export default function Header() {
                     <NavLink
                         to="/about"
                         className={({ isActive }) =>
-                            isActive ? "text-amber-700 underline" : ""
+                            isActive ? "text-amber-700" : ""
                         }
                     >
                         ABOUT
