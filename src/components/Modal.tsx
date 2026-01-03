@@ -7,7 +7,7 @@ export default function Modal({
 }) {
     return (
         <div
-            className="fixed inset-0 bg-slate-900/70 flex items-center justify-center"
+            className="fixed inset-0 bg-amber-900/20 flex items-center justify-center"
             onClick={() => setOpenModal(undefined)}
         >
             <div
