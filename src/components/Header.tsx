@@ -7,14 +7,14 @@ export default function Header() {
         <header className="flex flex-col mb-10 mx-auto max-w-[1400px] text-xl">
             <div className="flex justify-between items-center m-5">
                 <div>
-                    <p className="font-title text-3xl dark:text-slate-50 text-slate-900">
+                    <p className="font-title text-3xl dark:text-slate-100 text-slate-900">
                         Emma Aune-Tangen
                     </p>
-                    <p className="text-slate-500 dark:text-slate-200">
+                    <p className="text-slate-500 dark:text-slate-300">
                         emmaaunetangen@gmail.com
                     </p>
                 </div>
-                <div className="flex gap-10 dark:text-slate-100">
+                <div className="flex gap-10 dark:text-slate-200">
                     <NavLink
                         to="/"
                         className={({ isActive }) =>
