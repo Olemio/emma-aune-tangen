@@ -2,16 +2,10 @@ import React from "react";
 import ProductCard from "./ProductCard.tsx";
 import Modal from "./Modal.tsx";
 import { artworks } from "../data/artworks.ts";
+import { formatTitle } from "../utils/helpers.tsx";
 
 export default function Main() {
     const [openModal, setOpenModal] = React.useState<string | undefined>();
-
-    const formatTitle = (title: string) => {
-        return (
-            title.split("/").pop()?.replace(".jpg", "").replaceAll("-", " ") ||
-            title
-        );
-    };
 
     return (
         <main className="mx-auto max-w-[1400px] px-5">
