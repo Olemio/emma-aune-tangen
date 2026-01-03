@@ -1,5 +1,5 @@
 import { Auth } from "./auth";
-import { SunIcon, MoonIcon } from "@heroicons/react/24/solid";
+import { SunIcon, MoonIcon } from "@heroicons/react/24/outline";
 import { NavLink } from "react-router-dom";
 
 export default function Header() {
@@ -30,12 +30,11 @@ export default function Header() {
                         ABOUT
                     </NavLink>
                     <Auth />
-                    <SunIcon className="h-6 w-6 cursor-pointer text-slate-700" />
-                    <MoonIcon className="h-6 w-6 cursor-pointer text-slate-700" />
+                    <MoonIcon className="h-6 w-6 cursor-pointer" />
                 </div>
             </div>
 
-            <div className="h-px w-full rounded-lg bg-slate-300"></div>
+            <div className="h-px w-full bg-slate-300"></div>
         </header>
     );
 }
