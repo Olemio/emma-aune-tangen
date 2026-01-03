@@ -11,10 +11,9 @@ export default function ProductCard({
 }) {
     return (
         <button onClick={() => setOpenModal(img)} className="flex flex-col">
-            <img className="object-cover" src={`${img}`} alt="" />
-            <div className="flex flex justify-between py-2 gap-1">
-                <p className="text-sm">{name}</p>
-                <p>{price}</p>
+            <img className="" src={`${img}`} alt="" />
+            <div className="flex px-2 pt-1 pb-4">
+                <p className="text-sm text-slate-500">{price}</p>
             </div>
         </button>
     );
