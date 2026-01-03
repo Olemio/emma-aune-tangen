@@ -7,7 +7,7 @@ import {
     MoonIcon as MoonSolid,
 } from "@heroicons/react/24/solid";
 import React from "react";
-import { applyTheme, getInitialTheme } from "../hooks/useTheme";
+import { applyTheme, getInitialTheme } from "../../hooks/useTheme";
 
 export function ThemeToggle() {
     const [theme, setTheme] = React.useState<"light" | "dark">(() =>

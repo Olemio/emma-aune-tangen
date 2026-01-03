@@ -1,8 +1,8 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import Header from "./components/Header";
-import Main from "./components/Main";
-import About from "./components/About.tsx";
-import Footer from "./components/Footer.tsx";
+import Main from "./pages/Main";
+import About from "./pages/About.tsx";
+import Header from "./layout/Header";
+import Footer from "./layout/Footer.tsx";
 
 export default function App() {
     return (

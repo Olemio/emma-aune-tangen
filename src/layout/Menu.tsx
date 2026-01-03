@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 // import { Auth } from "./auth";
-import { ThemeToggle } from "./ThemeToggle";
+import { ThemeToggle } from "../features/theme/ThemeToggle";
 import React from "react";
 import { Bars3BottomRightIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
