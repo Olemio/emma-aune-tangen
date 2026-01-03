@@ -33,8 +33,6 @@ export default function Header() {
                     <MoonIcon className="h-6 w-6 cursor-pointer" />
                 </div>
             </div>
-
-            <div className="h-px w-full bg-slate-300"></div>
         </header>
     );
 }
