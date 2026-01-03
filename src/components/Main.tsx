@@ -8,39 +8,37 @@ const images = import.meta.glob("../image-library/*.jpg", {
 }) as Record<string, string>;
 
 export default function Main() {
-    const [searchText, setSearchText] = React.useState("");
+    // const [searchText, setSearchText] = React.useState("");
     const [productItems, setProductItems] = React.useState(
         Object.entries(images)
     );
     const [openModal, setOpenModal] = React.useState<string | undefined>();
 
-    const filterFunction = () => {
-        const filteredImages = Object.entries(images).filter(([path, src]) => {
-            const name = path
-                .split("/")
-                .pop()
-                ?.replace(".jpg", "")
-                .replaceAll("-", " ");
-            if (
-                [...searchText.replace(" ", "")].every((char) =>
-                    name?.includes(char)
-                )
-            ) {
-                return [path, src];
-            }
-        });
-        return filteredImages.filter(Boolean);
-    };
+    // const filterFunction = () => {
+    //     const filteredImages = Object.entries(images).filter(([path, src]) => {
+    //         const name = path
+    //             .split("/")
+    //             .pop()
+    //             ?.replace(".jpg", "")
+    //             .replaceAll("-", " ");
+    //         if (
+    //             [...searchText.replace(" ", "")].every((char) =>
+    //                 name?.includes(char)
+    //             )
+    //         ) {
+    //             return [path, src];
+    //         }
+    //     });
+    //     return filteredImages.filter(Boolean);
+    // };
 
-    React.useEffect(() => {
-        setProductItems(filterFunction());
-    }, [searchText]);
-
-    console.log(openModal);
+    // React.useEffect(() => {
+    //     setProductItems(filterFunction());
+    // }, [searchText]);
 
     return (
-        <main className="flex flex-col items-center mx-auto w-full max-w-[1400px]">
-            <div className="w-full flex justify-between mb-8">
+        <main className="mx-auto max-w-[1400px] px-5">
+            {/* <div className="w-full flex justify-between mb-8">
                 <h1 className="text-3xl">Portfølje</h1>
                 <input
                     className="border border-slate-300 rounded px-4 py-2"
@@ -48,9 +46,9 @@ export default function Main() {
                     type="text"
                     onChange={(e) => setSearchText(e.target.value)}
                 />
-            </div>
+            </div> */}
 
-            <div className="columns-2 md:columns-3 lg:columns-4 gap-6 w-full">
+            <div className="columns-2 md:columns-3 lg:columns-4 gap-10">
                 {productItems.map(([path, src]) => {
                     const name = path
                         .split("/")
