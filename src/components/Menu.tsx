@@ -32,7 +32,7 @@ export default function Menu() {
 
             {/* Mobile  */}
             <button onClick={() => setIsOpen(true)} className="md:hidden flex">
-                <Bars3BottomRightIcon className="h-8 w-8 text-slate-900 dark:text-slate-100" />
+                <Bars3BottomRightIcon className="h-8 w-8 text-slate-900 dark:text-slate-100 cursor-pointer" />
             </button>
             <div
                 className={`
@@ -55,7 +55,7 @@ export default function Menu() {
                         onClick={() => setIsOpen(false)}
                         className="text-2xl"
                     >
-                        <XMarkIcon className="h-20" />
+                        <XMarkIcon className="h-16 cursor-pointer" />
                     </button>
                 </div>
                 <div className="flex flex-col items-center h-full w-full gap-20 mt-20">

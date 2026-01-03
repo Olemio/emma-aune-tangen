@@ -1,3 +1,5 @@
+import { XMarkIcon } from "@heroicons/react/24/outline";
+
 export default function Modal({
     image,
     setOpenModal,
@@ -14,7 +16,12 @@ export default function Modal({
                 className="flex flex-col min-w-80vw items-end bg-slate-100 dark:bg-[#191B1A] px-6 py-4 rounded-lg gap-2 text-lg max-h-[80vh] max-w-[80vw]"
                 onClick={(e) => e.stopPropagation()}
             >
-                <button onClick={() => setOpenModal(undefined)}>Close</button>
+                <button
+                    className="cursor-pointer"
+                    onClick={() => setOpenModal(undefined)}
+                >
+                    <XMarkIcon className="h-8" />
+                </button>
                 <img
                     className="rounded-lg object-contain max-h-[70vh]"
                     src={image}

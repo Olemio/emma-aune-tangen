@@ -25,11 +25,11 @@ export function ThemeToggle() {
             }
             className="md:h-8 md:w-8 h-16 w-16"
         >
-            <span className="md:hidden">
+            <span className="md:hidden cursor-pointer">
                 {theme === "light" ? <MoonSolid /> : <SunSolid />}
             </span>
 
-            <span className="hidden md:block">
+            <span className="hidden md:block cursor-pointer">
                 {theme === "light" ? <MoonOutline /> : <SunOutline />}
             </span>
         </button>
