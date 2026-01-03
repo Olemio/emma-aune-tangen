@@ -33,7 +33,7 @@ export default function ProductCard({
             </div>
 
             {price ? (
-                <div className="flex p-2.5">
+                <div className="flex bg-amber-100 rounded p-2.5">
                     <p className="text-sm text-slate-500 dark:text-slate-300">
                         {price} NOK
                     </p>
