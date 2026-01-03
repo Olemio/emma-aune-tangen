@@ -2,6 +2,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Header from "./components/Header";
 import Main from "./components/Main";
 import About from "./components/About.tsx";
+import Footer from "./components/Footer.tsx";
 
 export default function App() {
     return (
@@ -12,6 +13,7 @@ export default function App() {
                 <Route path="/about" element={<About />} />
                 <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
+            <Footer />
         </>
     );
 }
