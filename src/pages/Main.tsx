@@ -20,11 +20,15 @@ export default function Main() {
     );
 
     const visibleArtworks = React.useMemo(() => {
-        const q = search.trim().toLowerCase();
+        const q = search.toLowerCase().replace(/\s+/g, "");
 
-        let list = artworks.filter((a) =>
-            q ? a.title.toLowerCase().includes(q) : true
-        );
+        let list = artworks.filter((a) => {
+            if (!q) return true;
+
+            const title = a.title.toLowerCase().replace(/\s+/g, "");
+
+            return [...q].every((char) => title.includes(char));
+        });
 
         list = [...list].sort((a, b) => {
             switch (sort) {
