@@ -24,7 +24,7 @@ export default function Controls({
     onReset,
 }: Props) {
     return (
-        <div className="grid grid-cols-3 px-4 mb-4 text-sm border-b border-slate-200 text-slate-500">
+        <div className="grid grid-cols-2 md:grid-cols-3 px-4 mb-4 text-sm border-b border-slate-200 text-slate-500">
             <div className="flex justify-start">
                 <select
                     value={sort}
@@ -43,10 +43,10 @@ export default function Controls({
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search…"
-                className="text-center focus:outline-none placeholder:text-amber-900/40 text-lg"
+                className="text-end md:text-center focus:outline-none placeholder:text-slate-500 md:placeholder:text-amber-900/40 md:text-lg"
             />
 
-            <div className="flex justify-end">
+            <div className="hidden md:flex justify-end">
                 <button onClick={onReset}>Reset</button>
             </div>
         </div>
