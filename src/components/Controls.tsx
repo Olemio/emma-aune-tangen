@@ -43,7 +43,7 @@ export default function Controls({
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search…"
-                className="text-center focus:outline-none placeholder:text-amber-700/50 text-lg"
+                className="text-center focus:outline-none placeholder:text-amber-900/40 text-lg"
             />
 
             <div className="flex justify-end">
