@@ -11,7 +11,7 @@ export default function Modal({
 }) {
     return (
         <div
-            className="fixed inset-0 bg-amber-900/50 backdrop-blur-xs flex items-center justify-center p-4 md:p-8"
+            className="fixed z-50 inset-0 bg-amber-900/50 backdrop-blur-xs flex items-center justify-center p-4 md:p-8"
             onClick={() => setOpenModalId(undefined)}
         >
             <div
