@@ -21,14 +21,16 @@ export default function Header() {
     }, []);
     return (
         <header
-            className={`sticky top-0 z-48 transition-colors duration-300 flex flex-col mb-10    mx-auto max-w-[1400px] text-xl ${
-                scrolled ? "backdrop-blur-lg bg-slate-50/60" : "bg-transparent"
+            className={`sticky top-0 z-48 transition-colors duration-300 flex flex-col mb-10    mx-auto text-xl ${
+                scrolled
+                    ? "backdrop-blur-lg dark:bg-amber-900/75 bg-amber-50/75"
+                    : "bg-transparent"
             }`}
         >
             <div
                 className={`
                     flex justify-between items-center
-                    transition-all duration-300
+                    m-auto w-full max-w-[1400px] transition-all duration-300
                     ${scrolled ? "px-5 py-2" : "p-5"}
                 `}
             >
