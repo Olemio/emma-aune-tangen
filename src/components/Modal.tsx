@@ -11,11 +11,11 @@ export default function Modal({
 }) {
     return (
         <div
-            className="fixed z-50 inset-0 bg-amber-900/50 backdrop-blur-xs flex items-center justify-center p-4 md:p-8"
+            className="fixed z-50 inset-0 bg-slate-50/90 backdrop-blur-xs flex items-center justify-center p-4 md:p-8"
             onClick={() => setOpenModalId(undefined)}
         >
             <div
-                className="flex flex-col rounded md:flex-row bg-slate-50 dark:bg-[#191B1A] max-w-[90vw] max-h-[90vh] overflow-hidden"
+                className="flex flex-col w-[min(90vw,calc(90vh*4/3))] h-[min(90vh,calc(90vw*3/4))] rounded md:flex-row dark:bg-[#191B1A] max-w-[90vw] max-h-[90vh] overflow-hidden"
                 onClick={(e) => e.stopPropagation()}
             >
                 <div className="w-[min(90vw,1100px)]  bg-slate-100 dark:bg-black/30 flex items-center justify-center">
