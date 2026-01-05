@@ -36,7 +36,7 @@ export default function Modal({
                     <h1 className="text-3xl font-title italic font-bold text-amber-700">
                         {data.title}
                     </h1>
-
+                    <p>{data.description}</p>
                     {data.price || data.sold || data.year || data.size ? (
                         <div className="flex flex-col items-center gap-4 m-auto">
                             <h2 className="text-xl">About artwork</h2>
