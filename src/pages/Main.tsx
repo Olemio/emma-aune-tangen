@@ -74,7 +74,6 @@ export default function Main() {
               price={price}
               year={year}
               size={size}
-              setOpenModalId={setOpenModalId}
             />
           );
         })}

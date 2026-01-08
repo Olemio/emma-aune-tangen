@@ -8,7 +8,6 @@ export default function ProductCard({
     price,
     year,
     size,
-    setOpenModalId,
 }: {
     id: string;
     src: string;
@@ -16,7 +15,6 @@ export default function ProductCard({
     price?: number;
     year?: number;
     size?: string;
-    setOpenModalId: (id: string | undefined) => void;
 }) {
     return (
         <Link
