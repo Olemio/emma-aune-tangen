@@ -23,7 +23,7 @@ export default function Modal({
         </button>
 
         <div
-          className="flex flex-col bg-red-200 rounded md:flex-row dark:bg-[#191B1A] max-w-[90vw] max-h-[90vh] overflow-hidden"
+          className="flex flex-col rounded md:flex-row dark:bg-[#191B1A] max-w-[90vw] max-h-[90vh] overflow-hidden"
           onClick={(e) => e.stopPropagation()}
         >
           <img
@@ -31,18 +31,31 @@ export default function Modal({
             src={data.src}
             alt={data.title}
           />
-          <div className="flex flex-col items-center gap-8 p-6 min-w-[260px] max-w-[400px] bg-blue-200">
+          <div className="flex flex-col items-center gap-8 p-6 min-w-[260px] max-w-[400px]">
             <h1 className="text-3xl font-title italic font-bold text-amber-700">
               {data.title}
             </h1>
             <p className="text-xl">{data.description}</p>
-            {data.price || data.sold || data.year || data.size ? (
-              <div className="flex flex-col items-center gap-4 m-auto">
+            
                 <h2 className="text-xl">About artwork</h2>
+            {data.price || data.sold || data.year || data.size ? (
+              <div className="flex items-center gap-4 m-auto">
+                <div className="bg-slate-300 px-4 py-1 rounded text-lg">
+
                 {data.price ? <p>{formatNOK(data.price)}</p> : null}
-                {data.sold ? <p>{data.sold ? "Sold" : null}</p> : null}
-                {data.year ? <p>{data.year}</p> : null}
-                {data.size ? <p>{data.size}</p> : null}
+                </div>
+                <div className="bg-slate-300 px-4 py-1 rounded text-lg">
+                {data.price ? <p>{data.sold ? "Sold" : null}</p> : null}
+                </div>
+                <div className="bg-slate-300 px-4 py-1 rounded text-lg">
+                {data.price ? <p>{data.year}</p> : null}
+                </div>
+                <div className="bg-slate-300 px-4 py-1 rounded text-lg">
+                {data.price ? <p>{data.size}</p> : null}
+                </div>
+                <div className="bg-slate-300 px-4 py-1 rounded text-lg">
+                {data.price ? <p>{data.year}</p> : null}
+                </div>
               </div>
             ) : null}
           </div>
