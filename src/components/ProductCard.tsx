@@ -1,4 +1,5 @@
 import { formatNOK } from "../utils/helpers";
+import { Link } from "react-router-dom";
 
 export default function ProductCard({
     id,
@@ -18,17 +19,18 @@ export default function ProductCard({
     setOpenModalId: (id: string | undefined) => void;
 }) {
     return (
-        <button
-            onClick={() => setOpenModalId(id)}
+        <Link
+            to={`/art/${id}`}
             className="group flex flex-col cursor-pointer mb-2.5"
         >
             <div className="relative">
+            <Link to={`/art/${id}`}>
                 <img
                     src={src}
                     alt={title}
                     className="w-full rounded-t transition-opacity duration-300 group-hover:opacity-80"
                 />
-
+            </Link>
                 <div className="absolute rounded-t inset-0 bg-amber-700/0 duration-300 group-hover:bg-amber-700/60" />
 
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
@@ -51,6 +53,6 @@ export default function ProductCard({
                     </p>
                 </div>
             ) : null}
-        </button>
+        </Link>
     );
 }

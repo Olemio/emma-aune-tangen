@@ -80,7 +80,7 @@ export default function Main() {
         })}
       </div>
 
-      {selectedArtwork ? (
+       {selectedArtwork ? (
         <Modal data={selectedArtwork} setOpenModalId={setOpenModalId} />
       ) : null}
     </main>
