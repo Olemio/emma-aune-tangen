@@ -32,12 +32,11 @@ export default function Modal({
             alt={data.title}
           />
           <div className="flex flex-col items-center gap-8 p-6 min-w-[260px] max-w-[400px]">
-            <h1 className="text-3xl font-title italic font-bold text-amber-700">
+            <h1 className="text-3xl text-center font-title italic font-bold text-amber-700">
               {data.title}
             </h1>
-            <p className="text-xl">{data.description}</p>
+            <p className="text-xl text-center">{data.description}</p>
             
-                <h2 className="text-xl">About artwork</h2>
             {data.price || data.sold || data.year || data.size ? (
               <div className="flex items-center gap-4 m-auto">
                 <div className="bg-slate-300 px-4 py-1 rounded text-lg">
