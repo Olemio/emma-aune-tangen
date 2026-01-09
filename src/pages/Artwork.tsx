@@ -36,7 +36,7 @@ export default function Artwork() {
           </div>
         )}
 
-        <Link to="/" className="underline mt-6">Back</Link>
+        <Link to="/" className="text-2xl underline mt-6">Back</Link>
         </div>
     </div>
   )
