@@ -45,7 +45,7 @@ export default function Artwork() {
 }
 
 
-function MetaData({children: ReactNode}) {
+function MetaData({children}: {children: ReactNode}) {
   return (
     <div className="bg-slate-200 rounded px-4 py-2">
       {children}
