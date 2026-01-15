@@ -20,7 +20,7 @@ export default function Artwork() {
 
         <h1 className="text-center text-3xl font-title italic font-bold">{art.title}</h1>
       <img
-        className="w-full md:w-2/3 max-h-[80vh] object-contain"
+        className="w-full md:w-2/3 rounded max-h-[80vh] object-contain"
         src={art.src}
         alt={art.title}
       />
