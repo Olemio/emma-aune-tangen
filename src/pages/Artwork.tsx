@@ -1,7 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import {artworks} from "../data/artworks";
 import {formatNOK} from "../utils/helpers"
-import {ReactNode} from "react"
+import type {ReactNode} from "react"
 
 export default function Artwork() {
   const {id} = useParams<{id: string}>();
