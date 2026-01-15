@@ -29,16 +29,25 @@ export default function Artwork() {
         <p>{art.description}</p>
 
         {(art.price || art.sold || art.year || art.size) && (
-          <div className="mt-4 flex flex-col gap-2">
-          {art.price ? <p>{formatNOK(art.price)}</p> : null}
-          {art.sold ? <p>Sold</p> : null}
-          {art.year ? <p>{art.year}</p> : null}
-          {art.size ? <p>{art.size}</p> : null}
+          <div className="mt-4 flex flex-wrap justify-center gap-2">
+          {art.price ? <MetaData>{formatNOK(art.price)}</MetaData> : null}
+          {art.sold ? <MetaData>Sold</MetaData> : null}
+          {art.year ? <MetaData>{art.year}</MetaData> : null}
+          {art.size ? <MetaData>{art.size}</MetaData> : null}
           </div>
         )}
 
         <Link to="/" className="text-2xl underline mt-6">Back</Link>
         </div>
+    </div>
+  )
+}
+
+
+function MetaData({children}) {
+  return (
+    <div className="bg-slate-200 rounded px-4 py-2">
+      {children}
     </div>
   )
 }
