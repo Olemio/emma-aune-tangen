@@ -1,6 +1,5 @@
 import React from "react";
 import ProductCard from "../components/ProductCard.tsx";
-import Modal from "../components/Modal.tsx";
 import { artworks, type Artwork } from "../data/artworks.ts";
 import { formatTitle } from "../utils/helpers.tsx";
 import Controls, { type SortKey } from "../components/Controls.tsx";
