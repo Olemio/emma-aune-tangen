@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import {artworks} from "../data/artworks";
 import {formatNOK} from "../utils/helpers"
+import {ReactNode} from "react"
 
 export default function Artwork() {
   const {id} = useParams<{id: string}>();
@@ -44,7 +45,7 @@ export default function Artwork() {
 }
 
 
-function MetaData({children}) {
+function MetaData({children: ReactNode}) {
   return (
     <div className="bg-slate-200 rounded px-4 py-2">
       {children}

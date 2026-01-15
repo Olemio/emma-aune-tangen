@@ -5,18 +5,12 @@ import { formatTitle } from "../utils/helpers.tsx";
 import Controls, { type SortKey } from "../components/Controls.tsx";
 
 export default function Main() {
-  const [openModalId, setOpenModalId] = React.useState<string | undefined>();
   const [sort, setSort] = React.useState<SortKey>("year-desc");
   const [search, setSearch] = React.useState<string>("");
 
   const findArtworkById = (id: string | undefined): Artwork | undefined => {
     return artworks.find((artwork) => artwork.id === id);
   };
-
-  const selectedArtwork = React.useMemo(
-    () => findArtworkById(openModalId),
-    [openModalId],
-  );
 
   const visibleArtworks = React.useMemo(() => {
     const q = search.toLowerCase().replace(/\s+/g, "");
