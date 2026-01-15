@@ -77,10 +77,6 @@ export default function Main() {
           );
         })}
       </div>
-
-       {selectedArtwork ? (
-        <Modal data={selectedArtwork} setOpenModalId={setOpenModalId} />
-      ) : null}
     </main>
   );
 }
