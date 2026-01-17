@@ -19,9 +19,9 @@ export default function Artwork() {
   }
 
   return (
-    <>
+    <div className="max-w-[1400px] px-4 mx-auto">
 
-    <div className="lg:hidden max-w-[1400px] mx-auto p-6 flex flex-col  gap-8">
+    <div className="lg:hidden p-6 flex flex-col justify-center gap-8">
       <div className="flex items-center justify-between gap-8">
 
         <h1 className="text-center text-3xl font-title italic font-bold">{art.title}</h1>
@@ -51,14 +51,12 @@ export default function Artwork() {
       </div>
     </div>
 
-    <div className="hidden lg:grid grid-cols-[4fr_5fr] max-w-[1400px] justify-center m-6 gap-16">
-      <div className="">
+    <div className="hidden lg:grid grid-cols-[4fr_5fr] max-w-[1400px] gap-8">
         <img
-          className="w-full  rounded max-h-[80vh] object-contain"
+          className="rounded max-h-[80vh] object-contain"
           src={art.src}
           alt={art.title}
         />
-      </div>
 
       <div className="flex flex-col">
         <div className="flex items-center justify-between gap-8 mb-32">
@@ -82,7 +80,7 @@ export default function Artwork() {
       </div>
         
     </div>
-    </>
+    </div>
   )
 }
 

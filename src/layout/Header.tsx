@@ -21,7 +21,7 @@ export default function Header() {
     }, []);
     return (
         <header
-            className={`sticky top-0 z-48 transition-colors duration-300 flex flex-col mb-10    mx-auto text-xl ${
+            className={`sticky top-0 z-48 transition-colors duration-300 flex flex-col mb-16    mx-auto text-xl ${
                 scrolled
                     ? "backdrop-blur-lg dark:bg-amber-900/75 bg-amber-50/75"
                     : "bg-transparent"
