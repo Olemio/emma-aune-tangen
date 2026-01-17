@@ -51,8 +51,8 @@ export default function Artwork() {
       </div>
     </div>
 
-    <div className="hidden lg:flex max-w-[1400px] justify-center p-6 gap-20">
-      <div>
+    <div className="hidden lg:grid grid-cols-[4fr_5fr] max-w-[1400px] justify-center m-6 gap-16">
+      <div className="">
         <img
           className="w-full  rounded max-h-[80vh] object-contain"
           src={art.src}
