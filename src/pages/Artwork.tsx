@@ -3,6 +3,8 @@ import {artworks} from "../data/artworks";
 import {formatNOK} from "../utils/helpers"
 import type {ReactNode} from "react"
 
+import { XMarkIcon } from "@heroicons/react/24/outline";
+
 export default function Artwork() {
   const {id} = useParams<{id: string}>();
   const art = artworks.find((a) => a.id === id);
@@ -21,8 +23,12 @@ export default function Artwork() {
 
     <div className="lg:hidden max-w-[1400px] mx-auto p-6 flex flex-col  gap-8">
       <div className="flex items-center justify-center gap-8">
-        <Link to="/" className="text-2xl underline">Back</Link>
+
         <h1 className="text-center text-3xl font-title italic font-bold">{art.title}</h1>
+        <Link to="/" className="text-2xl underline">
+
+                        <XMarkIcon className="h-8 cursor-pointer" />
+          </Link>
       </div>
 
       <img
@@ -57,8 +63,14 @@ export default function Artwork() {
       <div>
 
       <div className="flex items-center justify-center gap-8">
-        <Link to="/" className="text-2xl underline">Back</Link>
+
         <h1 className="text-center text-3xl font-title italic font-bold">{art.title}</h1>
+        <Link to="/" className="text-2xl underline">
+              
+
+
+                        <XMarkIcon className="h-8 cursor-pointer" />
+            </Link>
       </div>
 
 
