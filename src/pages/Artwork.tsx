@@ -17,16 +17,16 @@ export default function Artwork() {
   }
   
   return (
-    <div className="max-w-[1400px] mx-auto p-6 flex flex-col md:flex-row gap-8">
+    <div className="max-w-[1400px] mx-auto p-6 flex flex-col  gap-8">
 
-        <h1 className="text-center text-3xl font-title italic font-bold">{art.title}</h1>
+      <h1 className="text-center text-3xl font-title italic font-bold">{art.title}</h1>
       <img
-        className="w-full md:w-2/3 rounded max-h-[80vh] object-contain"
+        className="w-full  rounded max-h-[80vh] object-contain"
         src={art.src}
         alt={art.title}
       />
 
-      <div className="md:w-1/3 flex flex-col gap-4">
+      <div className="flex flex-col items-center gap-4">
         <p>{art.description}</p>
 
         {(art.price || art.sold || art.year || art.size) && (
