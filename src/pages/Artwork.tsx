@@ -51,7 +51,7 @@ export default function Artwork() {
       </div>
     </div>
 
-    <div className="hidden lg:flex max-w-[1400px] mx-auto p-6 gap-8">
+    <div className="hidden lg:flex max-w-[1400px] mx-auto justify-center p-6 gap-8">
       <div>
         <img
           className="w-full  rounded max-h-[80vh] object-contain"
@@ -60,21 +60,19 @@ export default function Artwork() {
         />
       </div>
 
-      <div>
+      <div className="flex flex-col justify-between gap-8">
 
       <div className="flex items-center justify-between gap-8">
         <h1 className="text-center text-3xl font-title italic font-bold">{art.title}</h1>
+
         <Link to="/" className="text-2xl underline">
-              
-
-
-                        <XMarkIcon className="h-8 cursor-pointer" />
-            </Link>
+            <XMarkIcon className="h-8 cursor-pointer" />
+          </Link>
       </div>
 
 
-      <div className="flex flex-col items-center gap-4">
         <p>{art.description}</p>
+      <div className="flex flex-col items-center gap-4">
 
         {(art.price || art.sold || art.year || art.size) && (
           <div className="mt-4 flex flex-wrap justify-center gap-2">
