@@ -45,7 +45,7 @@ export default function Artwork() {
       </div>
     </div>
 
-    <div className="hidden lg:flex max-w-[1400px] mx-auto p-6 flex-col  gap-8">
+    <div className="hidden lg:flex max-w-[1400px] mx-auto p-6 gap-8">
       <div>
         <img
           className="w-full  rounded max-h-[80vh] object-contain"
@@ -53,6 +53,8 @@ export default function Artwork() {
           alt={art.title}
         />
       </div>
+
+      <div>
 
       <div className="flex items-center justify-center gap-8">
         <Link to="/" className="text-2xl underline">Back</Link>
@@ -71,6 +73,7 @@ export default function Artwork() {
           {art.size ? <MetaData>{art.size}</MetaData> : null}
           </div>
         )}
+      </div>
       </div>
     </div>
     </>
