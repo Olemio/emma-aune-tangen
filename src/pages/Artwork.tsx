@@ -21,7 +21,9 @@ export default function Artwork() {
 <div className="flex items-center justify-center gap-8">
       <h1 className="text-center text-3xl font-title italic font-bold">{art.title}</h1>
 
-        <Link to="/" className="text-2xl underline">Back</Link>
+{/*
+  <Link to="/" className="text-2xl underline">Back</Link>
+*/}
       </div>
       <img
         className="w-full  rounded max-h-[80vh] object-contain"
