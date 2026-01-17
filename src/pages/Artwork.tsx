@@ -51,7 +51,7 @@ export default function Artwork() {
       </div>
     </div>
 
-    <div className="hidden lg:flex max-w-[1400px] mx-auto justify-center p-6 gap-8">
+    <div className="hidden lg:flex max-w-[1400px] justify-center p-6 gap-20">
       <div>
         <img
           className="w-full  rounded max-h-[80vh] object-contain"
@@ -60,26 +60,27 @@ export default function Artwork() {
         />
       </div>
 
-    <div className="flex flex-col">
-      <div className="flex items-center justify-between gap-8 mb-8">
-        <h1 className="text-center text-3xl font-title italic font-bold">{art.title}</h1>
+      <div className="flex flex-col">
+        <div className="flex items-center justify-between gap-8 mb-32">
+          <h1 className="text-center text-4xl font-title italic font-bold">{art.title}</h1>
 
-        <Link to="/" className="text-2xl underline">
-          <XMarkIcon className="h-8 cursor-pointer" />
-        </Link>
-      </div>
-
-      <p className="mb-4">{art.description}</p>
-
-      {(art.price || art.sold || art.year || art.size) && (
-        <div className="flex flex-wrap gap-2">
-        {art.price ? <MetaData>{formatNOK(art.price)}</MetaData> : null}
-        {art.sold ? <MetaData>Sold</MetaData> : null}
-        {art.year ? <MetaData>{art.year}</MetaData> : null}
-        {art.size ? <MetaData>{art.size}</MetaData> : null}
+          <Link to="/" className="text-2xl underline">
+            <XMarkIcon className="h-8 cursor-pointer" />
+          </Link>
         </div>
-      )}
+
+        <p className="mb-4 max-w-4/5 text-xl">{art.description}</p>
+
+        {(art.price || art.sold || art.year || art.size) && (
+          <div className="flex flex-wrap gap-2">
+            {art.price ? <MetaData>{formatNOK(art.price)}</MetaData> : null}
+            {art.sold ? <MetaData>Sold</MetaData> : null}
+            {art.year ? <MetaData>{art.year}</MetaData> : null}
+            {art.size ? <MetaData>{art.size}</MetaData> : null}
+          </div>
+        )}
       </div>
+        
     </div>
     </>
   )
