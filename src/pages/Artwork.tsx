@@ -60,29 +60,25 @@ export default function Artwork() {
         />
       </div>
 
-      <div className="flex flex-col justify-between gap-8">
-
-      <div className="flex items-center justify-between gap-8">
+    <div className="flex flex-col">
+      <div className="flex items-center justify-between gap-8 mb-8">
         <h1 className="text-center text-3xl font-title italic font-bold">{art.title}</h1>
 
         <Link to="/" className="text-2xl underline">
-            <XMarkIcon className="h-8 cursor-pointer" />
-          </Link>
+          <XMarkIcon className="h-8 cursor-pointer" />
+        </Link>
       </div>
 
+      <p className="mb-4">{art.description}</p>
 
-        <p>{art.description}</p>
-      <div className="flex flex-col items-center gap-4">
-
-        {(art.price || art.sold || art.year || art.size) && (
-          <div className="mt-4 flex flex-wrap justify-center gap-2">
-          {art.price ? <MetaData>{formatNOK(art.price)}</MetaData> : null}
-          {art.sold ? <MetaData>Sold</MetaData> : null}
-          {art.year ? <MetaData>{art.year}</MetaData> : null}
-          {art.size ? <MetaData>{art.size}</MetaData> : null}
-          </div>
-        )}
-      </div>
+      {(art.price || art.sold || art.year || art.size) && (
+        <div className="flex flex-wrap gap-2">
+        {art.price ? <MetaData>{formatNOK(art.price)}</MetaData> : null}
+        {art.sold ? <MetaData>Sold</MetaData> : null}
+        {art.year ? <MetaData>{art.year}</MetaData> : null}
+        {art.size ? <MetaData>{art.size}</MetaData> : null}
+        </div>
+      )}
       </div>
     </div>
     </>
