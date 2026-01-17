@@ -17,7 +17,9 @@ export default function Artwork() {
   }
 
   return (
-    <div className="lg:bg-red-500 max-w-[1400px] mx-auto p-6 flex flex-col  gap-8">
+    <>
+
+    <div className="lg:hidden max-w-[1400px] mx-auto p-6 flex flex-col  gap-8">
       <div className="flex items-center justify-center gap-8">
         <Link to="/" className="text-2xl underline">Back</Link>
         <h1 className="text-center text-3xl font-title italic font-bold">{art.title}</h1>
@@ -42,6 +44,36 @@ export default function Artwork() {
         )}
       </div>
     </div>
+
+    <div className="hidden lg:flex max-w-[1400px] mx-auto p-6 flex-col  gap-8">
+      <div>
+        <img
+          className="w-full  rounded max-h-[80vh] object-contain"
+          src={art.src}
+          alt={art.title}
+        />
+      </div>
+
+      <div className="flex items-center justify-center gap-8">
+        <Link to="/" className="text-2xl underline">Back</Link>
+        <h1 className="text-center text-3xl font-title italic font-bold">{art.title}</h1>
+      </div>
+
+
+      <div className="flex flex-col items-center gap-4">
+        <p>{art.description}</p>
+
+        {(art.price || art.sold || art.year || art.size) && (
+          <div className="mt-4 flex flex-wrap justify-center gap-2">
+          {art.price ? <MetaData>{formatNOK(art.price)}</MetaData> : null}
+          {art.sold ? <MetaData>Sold</MetaData> : null}
+          {art.year ? <MetaData>{art.year}</MetaData> : null}
+          {art.size ? <MetaData>{art.size}</MetaData> : null}
+          </div>
+        )}
+      </div>
+    </div>
+    </>
   )
 }
 
