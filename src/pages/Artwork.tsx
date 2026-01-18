@@ -7,6 +7,9 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 
 export default function Artwork() {
   const {id} = useParams<{id: string}>();
+
+  const [currentArtID, setCurrentArtID] = React.useState<string>(id)
+
   const art = artworks.find((a) => a.id === id);
   const navigate = useNavigate()
 
