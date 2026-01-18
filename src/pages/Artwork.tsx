@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import {artworks} from "../data/artworks";
 import {formatNOK} from "../utils/helpers"
 import type {ReactNode} from "react"
@@ -8,6 +8,11 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 export default function Artwork() {
   const {id} = useParams<{id: string}>();
   const art = artworks.find((a) => a.id === id);
+  const navigate = useNavigate()
+
+  function next() {
+    navigate(`/art/${+id + 1}`)
+  }
 
   if (!art) {
     return (
@@ -20,7 +25,7 @@ export default function Artwork() {
 
   return (
     <div className="max-w-[1400px] px-4 mx-auto">
-
+<button className="bg-red-200" onClick={next}>next button</button>
     <div className="lg:hidden p-6 flex flex-col justify-center gap-8">
       <div className="flex items-center justify-between gap-8">
 
