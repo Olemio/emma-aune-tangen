@@ -19,7 +19,7 @@ export default function Artwork() {
 
   if (!art) {
     return (
-      <div className="max-w-[1400px] mx-auto p-6">
+      <div className="max-w-350 mx-auto p-6">
       <h1 className="text-2xl font-bold">Artwork not found</h1>
       <Link to="/" className="underline">Back to gallery</Link>
       </div>
@@ -27,7 +27,7 @@ export default function Artwork() {
   }
 
   return (
-    <div className="max-w-[1400px] px-4 mx-auto">
+    <div className="max-w-350 px-4 mx-auto">
 <button className="bg-red-200" onClick={next}>next button</button>
     <div className="lg:hidden p-6 flex flex-col justify-center gap-8">
       <div className="flex items-center justify-between gap-8">
